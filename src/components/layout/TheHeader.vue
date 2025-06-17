@@ -5,7 +5,7 @@
         <!-- Logo (Left) -->
         <div class="logo-container">
           <router-link to="/" class="logo-link">
-            <el-image src="/colla_logo.png" alt="Colla" class="logo-image"></el-image>
+            <el-image src="/images/colla_logo.png" alt="Colla" class="logo-image"></el-image>
           </router-link>
         </div>
 
@@ -23,17 +23,21 @@
             </el-menu-item>
           </el-menu>
         </div>
-        
+
         <!-- Get Started Button (Right) -->
         <div class="action-container">
           <el-button type="primary" class="get-started-btn">
             Get Started
           </el-button>
-          
+
           <!-- Mobile Menu Button -->
           <el-button @click="isMobileMenuOpen = !isMobileMenuOpen" class="mobile-menu-btn" text>
-            <el-icon v-if="!isMobileMenuOpen" size="24"><Menu /></el-icon>
-            <el-icon v-else size="24"><Close /></el-icon>
+            <el-icon v-if="!isMobileMenuOpen" size="24">
+              <Menu />
+            </el-icon>
+            <el-icon v-else size="24">
+              <Close />
+            </el-icon>
           </el-button>
         </div>
       </div>
@@ -134,7 +138,7 @@ const isMobileMenuOpen = ref(false);
 }
 
 .get-started-btn {
-  background: linear-gradient(120deg,#fe815f 0%,  #febe5f 100%);
+  background: linear-gradient(120deg, #fe815f 0%, #febe5f 100%);
   border: none;
   display: none;
   border-radius: 10px;
@@ -224,4 +228,4 @@ const isMobileMenuOpen = ref(false);
   color: inherit;
   text-decoration: none;
 }
-</style> 
+</style>

@@ -13,7 +13,7 @@ watch(
     if (meta.title) {
       document.title = meta.title
     }
-    
+
     // 更新描述元标签
     let descriptionMeta = document.querySelector('meta[name="description"]')
     if (meta.description) {
@@ -26,7 +26,7 @@ watch(
         document.head.appendChild(descriptionMeta)
       }
     }
-    
+
     // 更新Open Graph标题
     let ogTitleMeta = document.querySelector('meta[property="og:title"]')
     if (meta.title) {
@@ -34,7 +34,7 @@ watch(
         ogTitleMeta.setAttribute('content', meta.title)
       }
     }
-    
+
     // 更新Open Graph描述
     let ogDescriptionMeta = document.querySelector('meta[property="og:description"]')
     if (meta.description) {
@@ -42,7 +42,7 @@ watch(
         ogDescriptionMeta.setAttribute('content', meta.description)
       }
     }
-    
+
     // 更新规范链接
     let canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
@@ -54,17 +54,17 @@ watch(
 </script>
 
 <template>
-  <div class="app-container min-h-screen flex flex-col">
+  <el-container class="app-container min-h-screen flex flex-col">
     <TheHeader />
-    <main class="flex-grow">
+    <el-main class="flex-grow">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
-    </main>
+    </el-main>
     <TheFooter />
-  </div>
+  </el-container>
 </template>
 
 <style>

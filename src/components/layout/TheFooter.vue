@@ -1,32 +1,32 @@
 <template>
   <el-footer class="footer">
-      <el-row class="footer-row">
-        <el-col :span="24">
-          <div class="footer-container">
-            <div class="footer-content">
-              <div class="footer-logo">
-                <el-image src="/colla_logo.png" alt="Colla Logo" class="logo-img"></el-image>
-              </div>
-              <div class="footer-copyright">
-                © 2025 Missive · 
-                <router-link to="/privacy" class="footer-link">Privacy Policy</router-link> · 
-                <router-link to="/terms" class="footer-link">Terms & Conditions</router-link>
-              </div>
-              <div class="footer-social">
-                <a href="#" class="social-link">
-                  <el-image src="/twitter.png" alt="Colla twitter" class="h-6"></el-image>
-                </a>
-                <a href="#" class="social-link">
-                  <el-image src="/discord.png" alt="Colla discord" class="h-6"></el-image>
-                </a>
-                <a href="#" class="social-link">
-                  <el-image src="/telegram.png" alt="Colla telegram" class="h-6"></el-image>
-                </a>
-              </div>
+    <el-row class="footer-row">
+      <el-col :span="24">
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <el-image src="/images/colla_logo.png" alt="Colla Logo" class="logo-img"></el-image>
+            </div>
+            <div class="footer-copyright">
+              © 2025 Missive ·
+              <router-link to="/privacy" class="footer-link">Privacy Policy</router-link> ·
+              <router-link to="/terms" class="footer-link">Terms & Conditions</router-link>
+            </div>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <el-image src="/images/twitter.png" alt="Colla twitter" class="h-6"></el-image>
+              </a>
+              <a href="#" class="social-link">
+                <el-image src="/images/discord.png" alt="Colla discord" class="h-6"></el-image>
+              </a>
+              <a href="#" class="social-link">
+                <el-image src="/images/telegram.png" alt="Colla telegram" class="h-6"></el-image>
+              </a>
             </div>
           </div>
-        </el-col>
-      </el-row>
+        </div>
+      </el-col>
+    </el-row>
   </el-footer>
 </template>
 
@@ -99,4 +99,4 @@
     text-align: center;
   }
 }
-</style> 
+</style>
