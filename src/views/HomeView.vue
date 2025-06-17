@@ -356,30 +356,68 @@
       <el-row class="py-16 bg-gray-50">
         <el-col :span="24">
           <div class="container">
-            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block">FAQ</el-text>
+            <h2 class="fqa-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">FQA
+            </h2>
 
-            <el-collapse>
-              <el-collapse-item title="What is Colla and how does it help me manage my inbox?" name="1">
-                <el-text tag="p">Colla is an AI-powered tool that helps creators and brands manage collaboration
-                  opportunities. It organizes your inbox, automates responses, and helps you negotiate better
-                  deals.</el-text>
-              </el-collapse-item>
+            <div class="faq-container">
+              <div class="faq-item" :class="{ active: activeFaqItem === 0 }">
+                <div class="faq-question" @click="toggleFaq(0)">
+                  <span>What is Colla! uesd for?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 0" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 0">
+                  <p>Colla is an AI-powered tool that helps creators and brands manage collaboration opportunities. It
+                    organizes your inbox, automates responses, and helps you negotiate better deals.</p>
+                </div>
+              </div>
 
-              <el-collapse-item title="How does the AI assistant work?" name="2">
-                <el-text tag="p">Our AI assistant, Nia, learns from your communication style and preferences to help
-                  manage your inbox, draft responses, and negotiate deals on your behalf.</el-text>
-              </el-collapse-item>
+              <div class="faq-item" :class="{ active: activeFaqItem === 1 }">
+                <div class="faq-question" @click="toggleFaq(1)">
+                  <span>How many team members can I invite to my account?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 1" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 1">
+                  <p>You may use any tool as long as you submit your work as a PDF file. The brief provides more details
+                    on the exact format required.You may use any tool as long as you submit your work as a PDF file. The
+                    brief provides more details on the exact format required.</p>
+                </div>
+              </div>
 
-              <el-collapse-item title="What can I do with the free tier?" name="3">
-                <el-text tag="p">The free tier gives you access to basic inbox management features, including email
-                  categorization and simple response templates.</el-text>
-              </el-collapse-item>
+              <div class="faq-item" :class="{ active: activeFaqItem === 2 }">
+                <div class="faq-question" @click="toggleFaq(2)">
+                  <span>How does Kin's memory work?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 2" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 2">
+                  <p>Our AI assistant, Nia, learns from your communication style and preferences to help manage your
+                    inbox, draft responses, and negotiate deals on your behalf.</p>
+                </div>
+              </div>
 
-              <el-collapse-item title="How safe is my data with Colla?" name="4">
-                <el-text tag="p">We take data security seriously. All your data is encrypted and we never share your
-                  information with third parties without your explicit permission.</el-text>
-              </el-collapse-item>
-            </el-collapse>
+              <div class="faq-item" :class="{ active: activeFaqItem === 3 }">
+                <div class="faq-question" @click="toggleFaq(3)">
+                  <span>What tools can I use, and in what format should I submit my work?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 3" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 3">
+                  <p>The free tier gives you access to basic inbox management features, including email categorization
+                    and simple response templates. For more advanced features, consider upgrading to our premium plans.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -400,45 +438,12 @@
           </div>
         </el-col>
       </el-row>
-
-      <!-- Footer -->
-      <el-row class="py-8 bg-white border-t">
-        <el-col :span="24">
-          <div class="container">
-            <div class="flex justify-between items-center">
-              <div class="logo">
-                <el-image src="/logo.png" alt="Colla Logo" class="h-6"></el-image>
-              </div>
-              <div class="text-sm text-gray-500">
-                © 2023 Colla. All rights reserved.
-              </div>
-              <div class="flex space-x-4">
-                <a href="#" class="text-gray-400 hover:text-gray-600">
-                  <el-icon>
-                    <Instagram />
-                  </el-icon>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gray-600">
-                  <el-icon>
-                    <Twitter />
-                  </el-icon>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gray-600">
-                  <el-icon>
-                    <Facebook />
-                  </el-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
     </el-main>
   </div>
 </template>
 
 <script>
-import { Check, Message, Share, Star } from '@element-plus/icons-vue';
+import { Check, Message, Share, Star, Plus, Close } from '@element-plus/icons-vue';
 
 export default {
   name: 'HomeView',
@@ -446,12 +451,19 @@ export default {
     Check,
     Instagram: Message,
     Twitter: Share,
-    Facebook: Star
+    Facebook: Star,
+    Plus,
+    Close
   },
   data() {
     return {
-
+      activeFaqItem: 1
     };
+  },
+  methods: {
+    toggleFaq(index) {
+      this.activeFaqItem = this.activeFaqItem === index ? null : index;
+    }
   },
   mounted() {
     // You can add animations here using GSAP
@@ -757,5 +769,66 @@ export default {
 
 .gradient-bg {
   background: linear-gradient(90deg, #FF6B6B 0%, #FF8E53 100%);
+}
+
+/* FAQ Styles */
+.fqa-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: Tobias TRIAL;
+  font-weight: 700;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.faq-answer {
+  position: relative;
+  padding: 0 1.5rem 1.5rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.faq-answer-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.faq-close-icon {
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.faq-item.active {
+  border-color: #d1d5db;
 }
 </style>
