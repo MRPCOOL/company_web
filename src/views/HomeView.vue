@@ -539,7 +539,7 @@ export default {
       activeFaqItem: 1,
       lottieAnimation: null,
       currentAnimationIndex: 0,
-      animationFiles: ['分镜1.json', '分镜2.json']
+      animationFiles: ['/分镜1.json', '/分镜2.json']
     };
   },
   methods: {
