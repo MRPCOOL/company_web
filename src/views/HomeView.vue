@@ -118,17 +118,15 @@
                     <el-card class="complexity-card" shadow="hover"
                       style="height: 100%;display: flex; flex-direction: column;min-height: 430px;">
                       <div class="card-icon">
-                        <el-icon>
-                          <Notebook />
-                        </el-icon>
+                        <el-image src="/images/notebook.png" style="width: 20px;height: 20px;" />
+                        <el-text tag="h3" class="card-title">
+                          Too many emails. Too<br /> much wasted time.
+                        </el-text>
+                        <el-text tag="p" class="card-description">
+                          50+ collab emails hit your inbox daily.<br /> Without automation, that's hours lost.
+                        </el-text>
                       </div>
-                      <el-text tag="h3" class="card-title">
-                        Too many emails. Too much wasted time.
-                      </el-text>
-                      <el-text tag="p" class="card-description">
-                        50+ collab emails hit your inbox daily. Without automation, that's hours lost.
-                      </el-text>
-                      <el-image src="/images/emails.png" style="margin-top: auto;width: 100%;height: 100%;" />
+                      <el-image src="/images/emails.png" style="width: 100%;height: 57%;" />
                       <!-- <div class="card-image emails-image" style="margin-top: auto;"></div> -->
                     </el-card>
                   </el-col>
@@ -136,16 +134,14 @@
                     <!-- Card 2 - Slow reply -->
                     <el-card class="complexity-card" shadow="hover" style="height: 45%;min-height: 180px; ">
                       <div class="card-icon">
-                        <el-icon>
-                          <Clock />
-                        </el-icon>
-                      </div>
-                      <el-text tag="h3" class="card-title">
-                        Every slow reply is a lost chance.
-                      </el-text>
-                      <div class="chat-bubbles" style="margin-top: auto;">
-                        <div class="chat-bubble">2h</div>
-                        <div class="chat-bubble">1h</div>
+                        <el-image src="/images/clock.png" style="width: 20px;height: 20px;" />
+                        <div style="display: flex;">
+                          <el-text tag="h3" class="card-title">
+                            Every slow reply is <br />a lost chance.
+                          </el-text>
+                          <el-image src="/images/hours.png"
+                            style="width: 20%;height:20%;margin-top: -20px;margin-left: 20px;" class="chat-bubbles" />
+                        </div>
                       </div>
                     </el-card>
                     <!-- Card 3 - Hours wasted -->
@@ -158,53 +154,58 @@
                 <el-col :span="24" style="height: 40%;margin-top: 25px;">
                   <!-- Card 6 - Repetition -->
                   <el-card class="complexity-card wide-card" shadow="hover"
-                    style="height: 100%; display: flex; flex-direction: column;">
+                    style="height: 97%; display: flex; flex-direction: column;">
                     <div class="card-icon">
-                      <el-icon>
-                        <Edit />
-                      </el-icon>
+                      <el-image src="/images/pencil.png" style="width: 20px;height: 20px;" />
+                      <el-text tag="h3" class="card-title">
+                        Repetition kills productivity.<br /> Automation restores it.
+                      </el-text>
+                      <div style="display: flex;margin-top: -20px;">
+                        <el-text tag="p" class="card-description">
+                          Brand deals involve endless repeats—addresses, quotes, media
+                          <br /> kits. Coolla handles it all in
+                          one
+                          click.
+                        </el-text>
+                        <el-image src="/images/Address.png" style="width: 20%;height:20%;margin-left:20%;" />
+                      </div>
                     </div>
-                    <el-text tag="h3" class="card-title">
-                      Repetition kills productivity. Automation restores it.
-                    </el-text>
-                    <el-text tag="p" class="card-description">
-                      Brand deals involve endless repeats—addresses, quotes, media kits. Coolla handles it all in one
-                      click.
-                    </el-text>
-                    <div class="folder-image" style="margin-top: auto;"></div>
                   </el-card>
                 </el-col>
               </el-col>
               <el-col :span="8" style="display: flex;flex-direction: column;height: 100%;">
                 <el-card class="complexity-card " shadow="hover" style="height: 40%;min-height: 356px;">
                   <div class="card-icon">
-                    <el-icon>
-                      <Warning />
-                    </el-icon>
+                    <el-image src="/images/warning.png" style="width: 20px;height: 20px;" />
+                    <el-text tag="h3" class="card-title">
+                      Struggle to negotiate?
+                      <br /> Lose the price you deserve.
+                    </el-text>
+
                   </div>
-                  <el-text tag="h3" class="card-title">
-                    Struggle to negotiate? Lose the price you deserve.
-                  </el-text>
-                  <div class="price-chart">
-                    <div class="price-item">
-                      <div class="price-line">$200</div>
-                    </div>
-                  </div>
+                  <el-row style="justify-content: center;align-items: center;margin-top: 10%;">
+                    <el-image src="/images/lowPrice.png" style="width: 50%;height: 20%;" />
+                  </el-row>
+
                 </el-card>
                 <!-- Card 5 - Contracts -->
                 <el-card class="complexity-card" shadow="hover" style="height: 60%;margin-top: 20px;min-height: 360px;">
                   <div class="card-icon">
-                    <el-icon>
-                      <Document />
-                    </el-icon>
+                    <el-image src="/images/document.png" style="width: 20px;height: 20px;" />
+                    <el-text tag="h3" class="card-title">
+                      Struggle with contracts?<br />
+                      Unequal contracts can<br />
+                      harm your rights.
+                    </el-text>
+                    <div style="display: flex;margin-top: -40px;">
+                      <el-text tag="p" class="card-description">
+                        Contract review is<br />
+                        time-consuming<br />
+                        and error-prone
+                      </el-text>
+                      <el-image src="/images/contract.png" style="width: 30%;height: 20%;margin-left:20%;" />
+                    </div>
                   </div>
-                  <el-text tag="h3" class="card-title">
-                    Struggle with contracts? Unequal contracts can harm your rights.
-                  </el-text>
-                  <el-text tag="p" class="card-description">
-                    Contract review is time-consuming and error-prone
-                  </el-text>
-                  <div class="contract-image"></div>
                 </el-card>
               </el-col>
             </el-row>
@@ -1032,6 +1033,7 @@ export default {
 
 .card-title {
   font-size: 1.5rem;
+  color: #1A130E;
   font-weight: 600;
   margin-bottom: 15px;
   display: block;
@@ -1169,7 +1171,6 @@ export default {
 .inbox-complexity-section {
   padding: 20px 0;
   padding-bottom: 50px;
-  background-color: #f9f9f9;
 }
 
 .section-title {
@@ -1195,6 +1196,10 @@ export default {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
+.complexity-card :deep(.el-card__body) {
+  height: 100%;
+}
+
 .complexity-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -1202,9 +1207,9 @@ export default {
 
 
 .card-icon {
-  margin-bottom: 20px;
   font-size: 24px;
   color: #333;
+  padding: 20px 40px 0 40px;
 }
 
 .card-title {
@@ -1219,7 +1224,6 @@ export default {
   font-size: 16px;
   color: #666;
   line-height: 1.5;
-  margin-bottom: 20px;
   display: block;
 }
 
@@ -1298,15 +1302,8 @@ export default {
   font-size: 14px;
 }
 
-/* Price chart styles */
-.price-chart {
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-}
 
-.price-label {
+/* .price-label {
   display: inline-block;
   background-color: #FF6E24;
   color: white;
@@ -1314,14 +1311,8 @@ export default {
   border-radius: 4px;
   font-size: 14px;
   margin-bottom: 10px;
-}
+} */
 
-.price-line {
-  border-bottom: 1px solid #ddd;
-  padding: 8px 0;
-  font-size: 16px;
-  color: #333;
-}
 
 /* Contract image styles */
 .contract-image {
