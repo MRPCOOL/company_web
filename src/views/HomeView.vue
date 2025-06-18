@@ -234,15 +234,11 @@
       </el-row>
 
       <!-- Control Section -->
-      <el-row class="py-16 gradient-bg text-white">
+      <el-row class="py-16 control-section">
         <el-col :span="24">
-          <div class="container text-center">
-            <el-text tag="h2" class="text-3xl font-bold mb-4 block text-white">
-              You're <span class="text-white">100%</span>
-              <br />in control of everything.
-            </el-text>
-            <el-text tag="p" class="mb-8 text-white">AI is your assistant, not your replacement.</el-text>
-          </div>
+          
+            <el-image src="/public/images/controlEverything.png"  class="full-width-image" fit="cover"></el-image>
+          
         </el-col>
       </el-row>
 
@@ -577,6 +573,15 @@ export default {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 4rem;
+}
+.control-section {
+  padding-top: 20rem;
 }
 
 .cta-button {
