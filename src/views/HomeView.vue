@@ -228,7 +228,12 @@
             </div>
             <!-- Features Grid -->
             <div ref="smartlottieContainer" class="meet-nia-full-image"></div>
+
           </div>
+          <el-text tag="p" class="text-center mb-5 font-TobiasTRIAL gradient-text-3color ">
+            <el-image src="/images/miniNia.png" />
+            Stay tuned for more…
+          </el-text>
         </el-col>
       </el-row>
 
@@ -245,7 +250,8 @@
       <el-row class="py-16 testimonials-section">
         <el-col :span="24">
           <div class="testimonials-container">
-            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL" style="color: black;font-size: 50px">
+            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL"
+              style="color: black;font-size: 50px">
               What Do KOLs <img src="/images/img.png" alt="KOL"
                 style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say?
             </el-text>
@@ -257,11 +263,14 @@
                     <div class="flex items-center mb-2">
                       <el-avatar :size="40" :src="item.avatar"></el-avatar>
                       <div class="ml-3">
-                        <el-text tag="h4" class="font-semibold" style="font-size: 14px;color: #1A130E">{{ item.name }}</el-text>
-                        <el-text tag="p" class="text-sm text-gray-500" style="font-size: 12px;">{{ item.email }}</el-text>
+                        <el-text tag="h4" class="font-semibold" style="font-size: 14px;color: #1A130E">{{ item.name
+                        }}</el-text>
+                        <el-text tag="p" class="text-sm text-gray-500" style="font-size: 12px;">{{ item.email
+                        }}</el-text>
                       </div>
                     </div>
-                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content" style="color:#48423e; font-size: 14px;">{{ item.content }}</el-text>
+                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content"
+                      style="color:#48423e; font-size: 14px;">{{ item.content }}</el-text>
                     <div class="flex items-center justify-between mt-4">
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Co-branding</div>
@@ -274,11 +283,13 @@
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">incomes</div>
-                        <div class="text-green-500 font-bold text-base" style="font-size: 16px;">+${{ item.incomes }}</div>
+                        <div class="text-green-500 font-bold text-base" style="font-size: 16px;">+${{ item.incomes }}
+                        </div>
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Processing time</div>
-                        <div class="text-black font-bold text-base" style="font-size: 16px;">-{{ item.processingTime }}%</div>
+                        <div class="text-black font-bold text-base" style="font-size: 16px;">-{{ item.processingTime }}%
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -292,11 +303,14 @@
                     <div class="flex items-center mb-2">
                       <el-avatar :size="40" :src="item.avatar"></el-avatar>
                       <div class="ml-3">
-                        <el-text tag="h4" class="font-semibold" style="font-size: 14px;color: #1A130E">{{ item.name }}</el-text>
-                        <el-text tag="p" class="text-sm text-gray-500" style="font-size: 12px;">{{ item.email }}</el-text>
+                        <el-text tag="h4" class="font-semibold" style="font-size: 14px;color: #1A130E">{{ item.name
+                        }}</el-text>
+                        <el-text tag="p" class="text-sm text-gray-500" style="font-size: 12px;">{{ item.email
+                        }}</el-text>
                       </div>
                     </div>
-                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content" style="color:#48423e; font-size: 14px;">{{ item.content }}</el-text>
+                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content"
+                      style="color:#48423e; font-size: 14px;">{{ item.content }}</el-text>
                     <div class="flex items-center justify-between mt-4">
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Co-branding</div>
@@ -309,11 +323,13 @@
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">incomes</div>
-                        <div class="text-green-500 font-bold text-base" style="font-size: 16px;">+${{ item.incomes }}</div>
+                        <div class="text-green-500 font-bold text-base" style="font-size: 16px;">+${{ item.incomes }}
+                        </div>
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Processing time</div>
-                        <div class="text-black font-bold text-base" style="font-size: 16px;">-{{ item.processingTime }}%</div>
+                        <div class="text-black font-bold text-base" style="font-size: 16px;">-{{ item.processingTime }}%
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1547,6 +1563,17 @@ export default {
   overflow: visible;
 }
 
+.gradient-text-3color {
+  background: linear-gradient(90deg, #FF6E24 0%, #FF8896 50%, #EF9CF0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
 
@@ -1769,7 +1796,7 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  width:100%;
+  width: 100%;
 }
 
 .cta-container {
