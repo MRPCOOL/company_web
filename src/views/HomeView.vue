@@ -29,37 +29,40 @@
             </div>
 
             <!-- Stats Cards -->
-            <el-row :gutter="20" class="mt-16 stats-row">
-              <el-col :xs="24" :md="8">
-                <el-card class="stat-card stat-card-yellow" shadow="hover">
+            <el-row :gutter="20" class="mt-16 stats-row" style="margin-top: 20%;">
+              <el-col :xs="24" :md="8"
+                style="background-image: url('/images/2x.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
+                <!-- <el-card class="stat-card stat-card-yellow" shadow="hover">
                   <div class="monthly-tag">Monthly</div>
                   <div class="stat-icon handshake-icon"></div>
                   <el-text tag="h3" class="text-4xl font-bold stat-value">2X</el-text>
                   <el-text tag="p" class="text-sm stat-label">Deals</el-text>
                   <el-text tag="p" class="text-xs stat-desc">More brand collab deals. Higher<br />Collab Value.
                     Greater Stability</el-text>
-                </el-card>
+                </el-card> -->
               </el-col>
 
-              <el-col :xs="24" :md="8">
-                <el-card class="stat-card stat-card-white" shadow="hover">
+              <el-col :xs="24" :md="8"
+                style="margin-top: -28%; background-image: url('/images/1.5x.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
+                <!-- <el-card class="stat-card stat-card-white" shadow="hover">
                   <div class="stat-icon income-icon"></div>
                   <div class="trend-arrow"></div>
                   <el-text tag="h3" class="text-4xl font-bold stat-value">1.5X</el-text>
                   <el-text tag="p" class="text-sm stat-label">Income</el-text>
                   <el-text tag="p" class="text-xs stat-desc">More income</el-text>
-                </el-card>
+                </el-card> -->
               </el-col>
 
-              <el-col :xs="24" :md="8">
-                <el-card class="stat-card stat-card-pink" shadow="hover">
+              <el-col :xs="24" :md="8"
+                style="background-image: url('/images/80%.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
+                <!-- <el-card class="stat-card stat-card-pink" shadow="hover">
                   <div class="stat-icon time-icon"></div>
                   <div class="down-arrow"></div>
                   <el-text tag="h3" class="text-4xl font-bold stat-value">80%</el-text>
                   <el-text tag="p" class="text-sm stat-label">Time</el-text>
                   <el-text tag="p" class="text-xs stat-desc">less back-and-forth inbox work</el-text>
                   <div class="gmail-icon"></div>
-                </el-card>
+                </el-card> -->
               </el-col>
             </el-row>
           </div>
@@ -223,7 +226,6 @@
                 <br />Work Less, Earn More
               </el-text>
             </div>
-
             <!-- Features Grid -->
             <div ref="smartlottieContainer" class="meet-nia-full-image"></div>
           </div>
@@ -809,6 +811,7 @@ export default {
 
 .stat-card-white {
   background-color: white;
+  box-shadow: 0px 0px 50px 0px #ff6d247c;
 }
 
 .stat-card-pink {
