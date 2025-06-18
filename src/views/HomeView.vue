@@ -239,29 +239,82 @@
         </el-col>
       </el-row>
 
-      <!-- Testimonials Section -->
-      <el-row class="py-16">
+      <!-- Testimonials Section (2-row Infinite Seamless Carousel) -->
+      <el-row class="py-16 testimonials-section">
         <el-col :span="24">
-          <div class="container">
+          <div class="testimonials-container">
             <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block">
-              What Do KOLs <span class="emoji">🗣️</span> Say?
+              What Do KOLs <img src="/images/img.png" alt="KOL" style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say?
             </el-text>
-
-            <el-row :gutter="20">
-              <el-col v-for="i in 6" :key="i" :xs="24" :md="12" :lg="8" class="mb-6">
-                <el-card class="testimonial-card bg-white p-6 rounded-xl shadow-sm border-0" shadow="hover">
-                  <div class="flex items-center mb-4">
-                    <el-avatar :size="40" src="/avatar-placeholder.png"></el-avatar>
-                    <div class="ml-3">
-                      <el-text tag="h4" class="font-semibold">User Name</el-text>
-                      <el-text tag="p" class="text-sm text-gray-500">@username</el-text>
+            <div class="testimonial-carousel-2row-wrapper">
+              <!-- 第一行：从右往左滚动 -->
+              <div class="testimonial-carousel-2row" @mouseenter="pauseCarousel" @mouseleave="resumeCarousel">
+                <div class="testimonial-carousel-track" :style="{ transform: `translateX(-${translateX1}px)` }">
+                  <div v-for="(item, idx) in row1Data" :key="idx" class="testimonial-card-custom2">
+                    <div class="flex items-center mb-2">
+                      <el-avatar :size="40" :src="item.avatar"></el-avatar>
+                      <div class="ml-3">
+                        <el-text tag="h4" class="font-semibold">{{ item.name }}</el-text>
+                        <el-text tag="p" class="text-sm text-gray-500">{{ item.email }}</el-text>
+                      </div>
+                    </div>
+                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content">{{ item.content }}</el-text>
+                    <div class="flex items-center justify-between mt-4">
+                      <div>
+                        <div class="text-xs text-gray-500 mb-1">Co-branding</div>
+                        <div class="brand-stack">
+                          <div v-for="(logo, i) in item.coBranding" :key="i" class="brand-stack-img" :style="{zIndex: 10-i, left: `${i*18}px`}" >
+                            <img :src="logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="text-xs text-gray-500 mb-1">incomes</div>
+                        <div class="text-green-500 font-bold text-base">+${{ item.incomes }}</div>
+                      </div>
+                      <div>
+                        <div class="text-xs text-gray-500 mb-1">Processing time</div>
+                        <div class="text-black font-bold text-base">-{{ item.processingTime }}%</div>
+                      </div>
                     </div>
                   </div>
-                  <el-text tag="p" class="text-gray-700">"Colla has completely transformed how I manage brand
-                    collaborations. I'm saving hours every week!"</el-text>
-                </el-card>
-              </el-col>
-            </el-row>
+                </div>
+              </div>
+
+              <!-- 第二行：从左往右滚动 -->
+              <div class="testimonial-carousel-2row" @mouseenter="pauseCarousel" @mouseleave="resumeCarousel">
+                <div class="testimonial-carousel-track" :style="{ transform: `translateX(-${translateX2}px)` }">
+                  <div v-for="(item, idx) in row2Data" :key="idx" class="testimonial-card-custom2">
+                    <div class="flex items-center mb-2">
+                      <el-avatar :size="40" :src="item.avatar"></el-avatar>
+                      <div class="ml-3">
+                        <el-text tag="h4" class="font-semibold">{{ item.name }}</el-text>
+                        <el-text tag="p" class="text-sm text-gray-500">{{ item.email }}</el-text>
+                      </div>
+                    </div>
+                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content">{{ item.content }}</el-text>
+                    <div class="flex items-center justify-between mt-4">
+                      <div>
+                        <div class="text-xs text-gray-500 mb-1">Co-branding</div>
+                        <div class="brand-stack">
+                          <div v-for="(logo, i) in item.coBranding" :key="i" class="brand-stack-img" :style="{zIndex: 10-i, left: `${i*18}px`}" >
+                            <img :src="logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="text-xs text-gray-500 mb-1">incomes</div>
+                        <div class="text-green-500 font-bold text-base">+${{ item.incomes }}</div>
+                      </div>
+                      <div>
+                        <div class="text-xs text-gray-500 mb-1">Processing time</div>
+                        <div class="text-black font-bold text-base">-{{ item.processingTime }}%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -383,7 +436,108 @@ export default {
       currentAnimationIndex: 0,
       smartCurrentAnimationIndex: 0,
       animationFiles: ['/分镜1.json', '/分镜2.json', '/分镜3.json', '/分镜4.json', '/分镜5.json', '/分镜6.json',],
-      smartAnimationFiles: ['/Clear-Deal-Flow.json']
+      smartAnimationFiles: ['/Clear-Deal-Flow.json'],
+      row1Testimonials: [
+        {
+          name: 'Jerome Bell',
+          email: 'jerome.bell@gmail.com',
+          content: 'Colla has saved me a lot of time, and brand cooperation has become well-organized!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png'],
+          incomes: 492,
+          processingTime: 50
+        },
+        {
+          name: 'Wade Warren',
+          email: 'wade.fox@gmail.com',
+          content: 'There used to be too many emails, but now everything is automated and my income has also increased!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png', '/brand4.png'],
+          incomes: 492,
+          processingTime: 63
+        },
+        {
+          name: 'Jane Cooper',
+          email: 'Jane.cc@gmail.com',
+          content: 'Colla makes my collaboration process more efficient. I highly recommend it to every creator!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png'],
+          incomes: 122,
+          processingTime: 53
+        },
+        {
+          name: 'Floyd Miles',
+          email: 'Floyd.miles@gmail.com',
+          content: 'The automatic reply and contract management are extremely convenient. Highly recommended!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png', '/brand4.png'],
+          incomes: 492,
+          processingTime: 63
+        },
+        {
+          name: 'Leslie Alexander',
+          email: 'Leslie.aa@gmail.com',
+          content: 'You no longer have to worry about missing out on important collaborations. Colla is simply amazing!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png'],
+          incomes: 122,
+          processingTime: 53
+        }
+      ],
+      row2Testimonials: [
+        {
+          name: 'Cody Fisher',
+          email: 'Cody.cc@gmail.com',
+          content: 'Brand management and revenue statistics are clearly presented, and efficiency has significantly improved.',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png'],
+          incomes: 122,
+          processingTime: 53
+        },
+        {
+          name: 'Jenny Wilson',
+          email: 'jenny.wilson@gmail.com',
+          content: 'Colla\'s automation features allow me to have more time to focus on my creative work.',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png'],
+          incomes: 320,
+          processingTime: 40
+        },
+        {
+          name: 'Kristin Watson',
+          email: 'kristin.watson@gmail.com',
+          content: 'One-click management of cooperative brands, with processing speed significantly enhanced!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png', '/brand4.png'],
+          incomes: 600,
+          processingTime: 70
+        },
+        {
+          name: 'Guy Hawkins',
+          email: 'guy.hawkins@gmail.com',
+          content: 'Colla has made our teamwork more smooth and reliable.',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png'],
+          incomes: 210,
+          processingTime: 35
+        },
+        {
+          name: 'Brooklyn Simmons',
+          email: 'brooklyn.simmons@gmail.com',
+          content: 'User-friendly interface, powerful functions, and fully automated cooperation process!',
+          avatar: '/avatar-placeholder.png',
+          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png'],
+          incomes: 350,
+          processingTime: 45
+        }
+      ],
+      translateX1: 0,
+      translateX2: 0,
+      row1Data: [],
+      row2Data: [],
+      isCarouselPaused: false,
+      cardWidth: 374, // 卡片宽度 + margin
+      animationSpeed: 1, // 动画速度
     };
   },
   methods: {
@@ -459,7 +613,49 @@ export default {
           this.initSmartLottieAnimation();
         }, 100);
       });
-    }
+    },
+    startSeamlessScroll() {
+      // 为每行创建三组数据，确保无缝衔接
+      this.row1Data = [...this.row1Testimonials, ...this.row1Testimonials, ...this.row1Testimonials];
+      this.row2Data = [...this.row2Testimonials, ...this.row2Testimonials, ...this.row2Testimonials];
+
+      // 设置初始位置
+      this.translateX1 = 0;
+      // 第二行从最右边开始
+      this.translateX2 = this.cardWidth * this.row2Testimonials.length;
+
+      // 启动动画
+      this.animateSeamless();
+    },
+    animateSeamless() {
+      if (!this.isCarouselPaused) {
+        // 第一行从右向左滚动
+        this.translateX1 += this.animationSpeed;
+        // 第二行从左向右滚动
+        this.translateX2 -= this.animationSpeed;
+
+        // 计算一组数据的宽度
+        const groupWidth1 = this.cardWidth * this.row1Testimonials.length;
+        const groupWidth2 = this.cardWidth * this.row2Testimonials.length;
+
+        // 当第一行滚动超过一组数据时，重置位置
+        if (this.translateX1 >= groupWidth1) {
+          this.translateX1 = 0;
+        }
+
+        // 当第二行滚动到最左边时，重置到最右边
+        if (this.translateX2 <= 0) {
+          this.translateX2 = groupWidth2;
+        }
+      }
+      requestAnimationFrame(this.animateSeamless);
+    },
+    pauseCarousel() {
+      this.isCarouselPaused = true;
+    },
+    resumeCarousel() {
+      this.isCarouselPaused = false;
+    },
   },
   mounted() {
     // 初始化 Lottie 动画
@@ -467,6 +663,16 @@ export default {
       this.initLottieAnimation();
       this.initSmartLottieAnimation();
     });
+    // 启动两行无感轮播
+    this.$nextTick(() => {
+      this.startSeamlessScroll();
+    });
+  },
+  beforeUnmount() {
+    // 清理动画
+    if (this.animationFrame) {
+      cancelAnimationFrame(this.animationFrame);
+    }
   },
 };
 </script>
@@ -553,14 +759,12 @@ export default {
     transform: translateY(0);
   }
 }
-
 .full-width-image {
   width: 100%;
   height: auto;
   display: block;
   padding-top: 4rem;
 }
-
 .control-section {
   padding-top: 20rem;
 }
@@ -1212,7 +1416,6 @@ export default {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .card-icon {
   font-size: 24px;
   color: #333;
@@ -1364,5 +1567,126 @@ export default {
   .section-title {
     font-size: 32px;
   }
+}
+
+.testimonial-carousel-2row-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.testimonial-carousel-2row {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+.testimonial-carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: none;
+  will-change: transform;
+}
+.testimonial-card-custom2 {
+  min-width: 350px;
+  max-width: 370px;
+  margin-right: 24px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 2px solid #e5e7eb;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  padding: 24px 20px;
+  overflow: hidden;
+}
+.testimonial-card-custom2:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  border-color: #FF6E24;
+}
+.testimonial-content {
+  word-break: break-all;
+  white-space: normal;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.brand-stack {
+  position: relative;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+.brand-stack-img {
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  background: #eee;
+  transition: z-index 0.2s;
+}
+.brand-stack-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background-color: #f9f9f9;
+}
+
+.testimonials-container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.testimonial-carousel-2row-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.testimonial-carousel-2row {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.testimonial-carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: none;
+  will-change: transform;
+}
+
+.testimonial-card-custom2 {
+  min-width: 350px;
+  max-width: 370px;
+  margin-right: 24px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 2px solid #e5e7eb;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  padding: 24px 20px;
+  overflow: hidden;
 }
 </style>
