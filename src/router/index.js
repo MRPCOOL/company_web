@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/price',
     name: 'price',
-    component: () => import('../views/HomeView.vue'),
+    component: () => import('../views/PriceView.vue'),
     meta: { 
       title: 'Pricing - Colla', 
       description: 'View pricing plans for Colla brand collaboration automation tools.' 

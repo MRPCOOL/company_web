@@ -395,18 +395,10 @@
       </el-row>
 
       <!-- CTA Section -->
-      <el-row class="py-16 bg-gray-100">
+      <el-row class="cta-section">
         <el-col :span="24">
-          <div class="container text-center">
-            <el-text tag="h2" class="text-3xl font-bold mb-6 block">Get Started Now.</el-text>
-            <div class="mb-8">
-              <el-button type="primary" size="large" class="bg-primary">Sign Up for Free</el-button>
-            </div>
-            <el-row class="justify-center">
-              <el-col v-for="i in 6" :key="i" :xs="4" :sm="4" :md="4" :lg="4" class="flex justify-center">
-                <el-avatar :size="60" src="/avatar-placeholder.png"></el-avatar>
-              </el-col>
-            </el-row>
+          <div class="cta-container">
+            <el-button type="primary" size="large" class="cta-button">Start Your 7-Day Free Trial ($19.9)</el-button>
           </div>
         </el-col>
       </el-row>
@@ -689,6 +681,7 @@ export default {
 
 :deep(.el-main) {
   padding: 0 !important;
+  overflow: hidden;
 }
 
 .bg-primary {
@@ -777,7 +770,7 @@ export default {
 }
 
 .cta-button {
-  width: 356px;
+  width: 430px;
   height: 56px;
   font-size: 16px;
   font-weight: 500;
@@ -1721,5 +1714,89 @@ export default {
   height: 280px;
   display: flex;
   flex-direction: column;
+}
+
+.smart-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.smart-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.8s ease;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.control-section {
+  padding-top: 4rem;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CTA Section Styles */
+.cta-section {
+  background-image: url('/images/startedNow.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width:100%;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-80px);
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #FE815F 0%, #FEBE5F 100%);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(255, 110, 36, 0.3);
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 110, 36, 0.4);
+  background: linear-gradient(90deg, #FF8540 0%, #FFA0A8 100%);
 }
 </style>
