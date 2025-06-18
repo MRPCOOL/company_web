@@ -1601,10 +1601,16 @@ export default {
   transition: box-shadow 0.2s, border-color 0.2s;
   padding: 24px 20px;
   overflow: hidden;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 .testimonial-card-custom2:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   border-color: #FF6E24;
+}
+.testimonial-card-custom2 .flex.items-center.mb-2 {
+  margin-bottom: 12px;
 }
 .testimonial-content {
   word-break: break-all;
@@ -1615,6 +1621,12 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  margin-bottom: auto;
+}
+.testimonial-card-custom2 .flex.items-center.justify-between.mt-4 {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
 }
 .brand-stack {
   position: relative;
@@ -1688,5 +1700,8 @@ export default {
   transition: box-shadow 0.2s, border-color 0.2s;
   padding: 24px 20px;
   overflow: hidden;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
