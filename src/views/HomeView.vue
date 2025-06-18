@@ -101,66 +101,82 @@
       </el-row>
 
       <!-- Inbox Complexity Section -->
-      <el-row class="inbox-complexity-section py-16">
+      <el-row class="inbox-complexity-section ">
         <el-col :span="24">
           <div class="container">
-            <div class="text-center mb-12">
+            <div class="text-center mb-5">
               <el-text tag="h2" class="section-title">
                 Inbox complexity is stealing
                 <br />your time and money
               </el-text>
             </div>
+            <el-row :align="24" style="height: 100%;">
+              <el-col :span="16">
+                <el-col :span="24" style="display: flex; height: 57%;">
+                  <el-col :span="12" style="height: 100%;">
+                    <!-- Card 1 - Too many emails -->
+                    <el-card class="complexity-card" shadow="hover"
+                      style="height: 100%;display: flex; flex-direction: column;min-height: 430px;">
+                      <div class="card-icon">
+                        <el-icon>
+                          <Notebook />
+                        </el-icon>
+                      </div>
+                      <el-text tag="h3" class="card-title">
+                        Too many emails. Too much wasted time.
+                      </el-text>
+                      <el-text tag="p" class="card-description">
+                        50+ collab emails hit your inbox daily. Without automation, that's hours lost.
+                      </el-text>
+                      <el-image src="/images/emails.png" style="margin-top: auto;width: 100%;height: 100%;" />
+                      <!-- <div class="card-image emails-image" style="margin-top: auto;"></div> -->
+                    </el-card>
+                  </el-col>
+                  <el-col :span="12" style="display: flex; flex-direction: column;height: 100%;">
+                    <!-- Card 2 - Slow reply -->
+                    <el-card class="complexity-card" shadow="hover" style="height: 45%;min-height: 180px; ">
+                      <div class="card-icon">
+                        <el-icon>
+                          <Clock />
+                        </el-icon>
+                      </div>
+                      <el-text tag="h3" class="card-title">
+                        Every slow reply is a lost chance.
+                      </el-text>
+                      <div class="chat-bubbles" style="margin-top: auto;">
+                        <div class="chat-bubble">2h</div>
+                        <div class="chat-bubble">1h</div>
+                      </div>
+                    </el-card>
+                    <!-- Card 3 - Hours wasted -->
+                    <el-card class="complexity-card hours-card" shadow="hover"
+                      style="height: 51%;margin-top: 20px;min-height: 230px;">
 
-            <div class="complexity-cards-container">
-              <!-- Card 1 - Too many emails -->
-              <el-card class="complexity-card" shadow="hover">
-                <div class="card-icon">
-                  <el-icon>
-                    <Notebook />
-                  </el-icon>
-                </div>
-                <el-text tag="h3" class="card-title">
-                  Too many emails. Too much wasted time.
-                </el-text>
-                <el-text tag="p" class="card-description">
-                  50+ collab emails hit your inbox daily. Without automation, that's hours lost.
-                </el-text>
-                <div class="card-image emails-image"></div>
-              </el-card>
-
-              <!-- Card Group: Reply + Hours -->
-              <div class="card-group">
-                <!-- Card 2 - Slow reply -->
-                <el-card class="complexity-card" shadow="hover">
-                  <div class="card-icon">
-                    <el-icon>
-                      <Clock />
-                    </el-icon>
-                  </div>
-                  <el-text tag="h3" class="card-title">
-                    Every slow reply is a lost chance.
-                  </el-text>
-                  <div class="chat-bubbles">
-                    <div class="chat-bubble">2h</div>
-                    <div class="chat-bubble">1h</div>
-                  </div>
-                </el-card>
-
-                <!-- Card 3 - Hours wasted -->
-                <el-card class="complexity-card hours-card" shadow="hover">
-                  <div class="hours-overlay">
-                    <el-text tag="p" class="hours-text">
-                      Creators waste hours on emails — for just a few paid collabs.
+                    </el-card>
+                  </el-col>
+                </el-col>
+                <el-col :span="24" style="height: 40%;margin-top: 25px;">
+                  <!-- Card 6 - Repetition -->
+                  <el-card class="complexity-card wide-card" shadow="hover"
+                    style="height: 100%; display: flex; flex-direction: column;">
+                    <div class="card-icon">
+                      <el-icon>
+                        <Edit />
+                      </el-icon>
+                    </div>
+                    <el-text tag="h3" class="card-title">
+                      Repetition kills productivity. Automation restores it.
                     </el-text>
-                    <div class="hours-badge">4 hours/day</div>
-                  </div>
-                </el-card>
-              </div>
-
-              <!-- Card Group: Negotiate + Contracts -->
-              <div class="card-group">
-                <!-- Card 4 - Negotiate -->
-                <el-card class="complexity-card" shadow="hover">
+                    <el-text tag="p" class="card-description">
+                      Brand deals involve endless repeats—addresses, quotes, media kits. Coolla handles it all in one
+                      click.
+                    </el-text>
+                    <div class="folder-image" style="margin-top: auto;"></div>
+                  </el-card>
+                </el-col>
+              </el-col>
+              <el-col :span="8" style="display: flex;flex-direction: column;height: 100%;">
+                <el-card class="complexity-card " shadow="hover" style="height: 40%;min-height: 356px;">
                   <div class="card-icon">
                     <el-icon>
                       <Warning />
@@ -171,16 +187,12 @@
                   </el-text>
                   <div class="price-chart">
                     <div class="price-item">
-                      <div class="price-label">Low Price</div>
-                      <div class="price-line">$40</div>
-                      <div class="price-line">$60</div>
                       <div class="price-line">$200</div>
                     </div>
                   </div>
                 </el-card>
-
                 <!-- Card 5 - Contracts -->
-                <el-card class="complexity-card" shadow="hover">
+                <el-card class="complexity-card" shadow="hover" style="height: 60%;margin-top: 20px;min-height: 360px;">
                   <div class="card-icon">
                     <el-icon>
                       <Document />
@@ -194,24 +206,8 @@
                   </el-text>
                   <div class="contract-image"></div>
                 </el-card>
-              </div>
-
-              <!-- Card 6 - Repetition -->
-              <el-card class="complexity-card wide-card" shadow="hover">
-                <div class="card-icon">
-                  <el-icon>
-                    <Edit />
-                  </el-icon>
-                </div>
-                <el-text tag="h3" class="card-title">
-                  Repetition kills productivity. Automation restores it.
-                </el-text>
-                <el-text tag="p" class="card-description">
-                  Brand deals involve endless repeats—addresses, quotes, media kits. Coolla handles it all in one click.
-                </el-text>
-                <div class="folder-image"></div>
-              </el-card>
-            </div>
+              </el-col>
+            </el-row>
           </div>
         </el-col>
       </el-row>
@@ -385,7 +381,7 @@ export default {
       smartLottieAnimation: null,
       currentAnimationIndex: 0,
       smartCurrentAnimationIndex: 0,
-      animationFiles: ['/分镜1.json', '/分镜2.json','/分镜3.json','/分镜4.json','/分镜5.json','/分镜6.json',],
+      animationFiles: ['/分镜1.json', '/分镜2.json', '/分镜3.json', '/分镜4.json', '/分镜5.json', '/分镜6.json',],
       smartAnimationFiles: ['/Clear-Deal-Flow.json']
     };
   },
@@ -470,25 +466,7 @@ export default {
       this.initLottieAnimation();
       this.initSmartLottieAnimation();
     });
-    // 添加卡片动画效果
-    const cards = document.querySelectorAll('.complexity-card');
-    cards.forEach((card, index) => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-
-      setTimeout(() => {
-        card.style.transition = 'all 0.5s ease';
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      }, 100 * index);
-    });
   },
-  beforeUnmount() {
-    if (this.lottieAnimation) {
-      this.lottieAnimation.destroy();
-      this.smartLottieAnimation.destroy();
-    }
-  }
 };
 </script>
 
@@ -1194,7 +1172,8 @@ export default {
 
 /* Inbox Complexity Section Styles */
 .inbox-complexity-section {
-  padding: 80px 0;
+  padding: 20px 0;
+  padding-bottom: 50px;
   background-color: #f9f9f9;
 }
 
@@ -1202,34 +1181,30 @@ export default {
   font-size: 56px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 60px;
   display: block;
 }
 
 .complexity-cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(200px, auto);
-  gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+
 .complexity-card {
-  background-color: #fff;
+  background-color: #f9f9f9;
+  border: 1px solid #D6D7DB;
   border-radius: 16px;
-  padding: 30px;
-  height: 100%;
   transition: all 0.3s ease;
-  border: none;
   position: relative;
-  overflow: hidden;
+  margin-right: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 .complexity-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 .card-icon {
   margin-bottom: 20px;
@@ -1264,38 +1239,17 @@ export default {
   grid-column: span 2;
 }
 
-/* First card spans 1 column */
-.complexity-cards-container>.complexity-card:first-child {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-/* Card groups span 1 column each */
-.complexity-cards-container>.card-group:nth-child(2) {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.complexity-cards-container>.card-group:nth-child(3) {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-/* Last card spans 3 columns */
-.complexity-cards-container>.complexity-card:last-child {
-  grid-column: span 3;
-  grid-row: span 1;
-}
 
 /* Email card specific styles */
-.emails-image {
-  height: 200px;
-  background-image: url('/images/emails-pile.svg');
+/* .emails-image {
+  height: 180px;
+  margin-top: 20px;
+  background-image: url('/images/emails.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
-  margin-top: 20px;
-}
+  overflow: visible;
+} */
 
 /* Chat bubbles for reply card */
 .chat-bubbles {
@@ -1321,14 +1275,8 @@ export default {
 /* Hours card specific styles */
 .hours-card {
   background-color: #F5D0C5;
-  background-image: url("data:image/svg+xml,%3Csvg width='400' height='300' viewBox='0 0 400 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='300' fill='%23F5D0C5' /%3E%3Cpath d='M200 80C216.569 80 230 66.5685 230 50C230 33.4315 216.569 20 200 20C183.431 20 170 33.4315 170 50C170 66.5685 183.431 80 200 80Z' fill='%23BD8C7D' /%3E%3Cpath d='M150 280C150 230 170 180 200 180C230 180 250 230 250 280' fill='%23BD8C7D' /%3E%3Crect x='160' y='150' width='80' height='60' rx='5' fill='%23555555' /%3E%3Crect x='165' y='155' width='70' height='45' rx='2' fill='%23333333' /%3E%3Crect x='140' y='210' width='120' height='10' rx='5' fill='%23555555' /%3E%3Crect x='100' y='220' width='200' height='20' rx='2' fill='%238B5E3C' /%3E%3Crect x='280' y='180' width='20' height='30' rx='5' fill='%237B3F00' /%3E%3Cpath d='M280 185C280 182.239 282.239 180 285 180H295C297.761 180 300 182.239 300 185V185C300 187.761 297.761 190 295 190H285C282.239 190 280 187.761 280 185V185Z' fill='%237B3F00' /%3E%3Cpath d='M285 180C285 175 290 170 290 170' stroke='%237B3F00' stroke-width='2' /%3E%3C/svg%3E");
+  background-image: url("/images/4days.png");
   background-size: cover;
-  background-position: center;
-  min-height: 240px;
-  display: flex;
-  align-items: flex-end;
-  padding: 0;
-  overflow: hidden;
 }
 
 .hours-overlay {
@@ -1382,37 +1330,28 @@ export default {
 
 /* Contract image styles */
 .contract-image {
-  height: 160px;
+  height: 120px;
+  margin-top: 20px;
   background-image: url('/images/contract-folder.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
-  margin-top: 20px;
+  overflow: visible;
 }
 
 /* Folder image styles */
 .folder-image {
-  height: 120px;
+  height: 100px;
+  margin-top: 20px;
   background-image: url('/images/address-folder.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
-  margin-top: 20px;
+  overflow: visible;
 }
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-  .complexity-cards-container {
-    grid-template-columns: 1fr;
-  }
-
-  .complexity-cards-container>.complexity-card:first-child,
-  .complexity-cards-container>.card-group:nth-child(2),
-  .complexity-cards-container>.card-group:nth-child(3),
-  .complexity-cards-container>.complexity-card:last-child {
-    grid-column: span 1;
-    grid-row: auto;
-  }
 
   .section-title {
     font-size: 40px;
@@ -1424,9 +1363,6 @@ export default {
     gap: 16px;
   }
 
-  .complexity-card {
-    padding: 20px;
-  }
 
   .card-title {
     font-size: 20px;
