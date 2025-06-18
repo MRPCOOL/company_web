@@ -233,9 +233,9 @@
       <!-- Control Section -->
       <el-row class="py-16 control-section">
         <el-col :span="24">
-          
-            <el-image src="/public/images/controlEverything.png"  class="full-width-image" fit="cover"></el-image>
-          
+
+          <el-image src="/public/images/controlEverything.png" class="full-width-image" fit="cover"></el-image>
+
         </el-col>
       </el-row>
 
@@ -502,7 +502,7 @@ export default {
   overflow: hidden;
   line-height: 1.4;
   color: #1A130E;
-  font-size: 86px;
+  font-size: 80px;
   margin-bottom: 40px;
 }
 
@@ -553,12 +553,14 @@ export default {
     transform: translateY(0);
   }
 }
+
 .full-width-image {
   width: 100%;
   height: auto;
   display: block;
   padding-top: 4rem;
 }
+
 .control-section {
   padding-top: 20rem;
 }
@@ -943,7 +945,7 @@ export default {
   border-radius: 15px;
   font-size: 20px;
   transform: rotate(-30deg);
-  z-index: 999;
+  z-index: 20;
   white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
