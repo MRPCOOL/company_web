@@ -228,10 +228,14 @@
             </div>
             <!-- Features Grid -->
             <div ref="smartlottieContainer" class="meet-nia-full-image"></div>
+            <div ref="smartlottieContainer2" class="meet-nia-full-image"></div>
+            <el-image src="/images/smart3.png" class="meet-nia-full-image"></el-image>
+            <el-image src="/images/smart4.png" class="meet-nia-full-image"></el-image>
+            <el-image src="/images/smart6.png" class="meet-nia-full-image"></el-image>
 
           </div>
           <el-text tag="p" class="text-center mb-5 font-TobiasTRIAL gradient-text-3color ">
-            <el-image src="/images/miniNia.png" />
+            <el-image src="/images/miniNia.png" class ="niasmall"/>
             Stay tuned for more…
           </el-text>
         </el-col>
@@ -446,10 +450,13 @@ export default {
       activeFaqItem: 1,
       lottieAnimation: null,
       smartLottieAnimation: null,
+      smartLottieAnimation2: null,
       currentAnimationIndex: 0,
       smartCurrentAnimationIndex: 0,
+      smartCurrentAnimationIndex2: 0,
       animationFiles: ['/分镜1.json', '/分镜2.json', '/分镜3.json', '/分镜4.json', '/分镜5.json', '/分镜6.json',],
       smartAnimationFiles: ['/Clear-Deal-Flow.json'],
+      smartAnimationFiles2: ['/smart-replied.json'],
       row1Testimonials: [
         {
           name: 'Jerome Bell',
@@ -627,6 +634,41 @@ export default {
         }, 100);
       });
     },
+    initSmartLottieAnimation2() {
+      // 清除之前的动画实例
+      if (this.smartLottieAnimation2) {
+        this.smartLottieAnimation2.destroy();
+      }
+
+      // 加载当前动画
+      const animationFile = this.smartAnimationFiles2[this.smartCurrentAnimationIndex2];
+
+      this.smartLottieAnimation2 = lottie.loadAnimation({
+        container: this.$refs.smartlottieContainer2,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: animationFile,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice', // 保持宽高比并填充容器
+          clearCanvas: true
+        }
+      });
+      // 添加一个短暂的延迟，确保DOM完全更新
+      setTimeout(() => {
+        if (this.smartLottieAnimation2) {
+          this.smartLottieAnimation2.resize(); // 强制重新计算尺寸
+        }
+      }, 50);
+      // 监听动画完成事件
+      this.smartLottieAnimation2.addEventListener('complete', () => {
+        // 在切换动画之前添加短暂的延迟
+        setTimeout(() => {
+          this.smartCurrentAnimationIndex2 = (this.smartCurrentAnimationIndex2 + 1) % this.smartAnimationFiles2.length;
+          this.initSmartLottieAnimation();
+        }, 100);
+      });
+    },
     startSeamlessScroll() {
       // 为每行创建三组数据，确保无缝衔接
       this.row1Data = [...this.row1Testimonials, ...this.row1Testimonials, ...this.row1Testimonials];
@@ -675,6 +717,7 @@ export default {
     this.$nextTick(() => {
       this.initLottieAnimation();
       this.initSmartLottieAnimation();
+      this.initSmartLottieAnimation2();
     });
     // 启动两行无感轮播
     this.$nextTick(() => {
@@ -773,7 +816,10 @@ export default {
     transform: translateY(0);
   }
 }
+.niasmall{
 
+  transform: translateY(65px);
+}
 .full-width-image {
   width: 100%;
   height: auto;
@@ -1206,8 +1252,8 @@ export default {
 .meet-nia-full-image {
   width: 100%;
   display: block;
-  max-height: 443px;
   background-color: transparent;
+  margin-top: 32px;
 }
 
 .k12-card,
