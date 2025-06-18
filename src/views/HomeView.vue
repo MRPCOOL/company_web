@@ -228,159 +228,7 @@
             </div>
 
             <!-- Features Grid -->
-            <div class="space-y-12">
-              <!-- Feature 1 -->
-              <el-row class="feature-row items-center" :gutter="20">
-                <el-col :xs="24" :md="12">
-                  <div class="feature-text">
-                    <el-text tag="h3" class="text-2xl font-semibold mb-4 block">From Inbox Chaos To Clear Deal
-                      Flow</el-text>
-                    <el-text tag="p" class="text-gray-600 mb-4 block">Automatically organize and prioritize incoming
-                      opportunities</el-text>
-                    <el-space direction="vertical" size="small" class="w-full">
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Smart categorization of brand deals</span>
-                      </div>
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Automated response templates</span>
-                      </div>
-                    </el-space>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :md="12">
-                  <div class="feature-image">
-                    <el-image src="/feature-inbox.png" class="rounded-lg shadow-lg"></el-image>
-                  </div>
-                </el-col>
-              </el-row>
-
-              <!-- Feature 2 -->
-              <el-row class="feature-row items-center" :gutter="20">
-                <el-col :xs="24" :md="12" :order="2" :md-order="1">
-                  <div class="feature-image">
-                    <el-image src="/feature-personal.png" class="rounded-lg shadow-lg"></el-image>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :md="12" :order="1" :md-order="2">
-                  <div class="feature-text">
-                    <el-text tag="h3" class="text-2xl font-semibold mb-4 block">Personal Smart Reply, Professional Smart
-                      Reply</el-text>
-                    <el-text tag="p" class="text-gray-600 mb-4 block">AI-powered responses that sound like you</el-text>
-                    <el-space direction="vertical" size="small" class="w-full">
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Maintain your unique voice and style</span>
-                      </div>
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Professional negotiation assistance</span>
-                      </div>
-                    </el-space>
-                  </div>
-                </el-col>
-              </el-row>
-
-              <!-- Feature 3 -->
-              <el-row class="feature-row items-center" :gutter="20">
-                <el-col :xs="24" :md="12">
-                  <div class="feature-text">
-                    <el-text tag="h3" class="text-2xl font-semibold mb-4 block">Smart Quotes, Improved Prices, Zero
-                      Hassle</el-text>
-                    <el-text tag="p" class="text-gray-600 mb-4 block">Get the best rates for your
-                      collaborations</el-text>
-                    <el-space direction="vertical" size="small" class="w-full">
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Market rate analysis</span>
-                      </div>
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Automated price suggestions</span>
-                      </div>
-                    </el-space>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :md="12">
-                  <div class="feature-image">
-                    <el-image src="/feature-quotes.png" class="rounded-lg shadow-lg"></el-image>
-                  </div>
-                </el-col>
-              </el-row>
-
-              <!-- Feature 4 -->
-              <el-row class="feature-row items-center" :gutter="20">
-                <el-col :xs="24" :md="12" :order="2" :md-order="1">
-                  <div class="feature-image">
-                    <el-image src="/feature-selection.png" class="rounded-lg shadow-lg"></el-image>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :md="12" :order="1" :md-order="2">
-                  <div class="feature-text">
-                    <el-text tag="h3" class="text-2xl font-semibold mb-4 block">One Click Sample Selection, No More
-                      Endless Searches</el-text>
-                    <el-text tag="p" class="text-gray-600 mb-4 block">Quickly find and share your best work</el-text>
-                    <el-space direction="vertical" size="small" class="w-full">
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Portfolio management</span>
-                      </div>
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Customized sample packages</span>
-                      </div>
-                    </el-space>
-                  </div>
-                </el-col>
-              </el-row>
-
-              <!-- Feature 5 -->
-              <el-row class="feature-row items-center" :gutter="20">
-                <el-col :xs="24" :md="12">
-                  <div class="feature-text">
-                    <el-text tag="h3" class="text-2xl font-semibold mb-4 block">Contract? Tag Notes. File? Auto
-                      Archived.</el-text>
-                    <el-text tag="p" class="text-gray-600 mb-4 block">Keep all your documents organized</el-text>
-                    <el-space direction="vertical" size="small" class="w-full">
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Smart document management</span>
-                      </div>
-                      <div class="flex items-center">
-                        <el-icon class="text-primary mr-2">
-                          <Check />
-                        </el-icon>
-                        <span>Automated filing system</span>
-                      </div>
-                    </el-space>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :md="12">
-                  <div class="feature-image">
-                    <el-image src="/feature-contract.png" class="rounded-lg shadow-lg"></el-image>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
+            <div ref="smartlottieContainer" class="meet-nia-full-image"></div>
           </div>
         </el-col>
       </el-row>
@@ -538,8 +386,11 @@ export default {
     return {
       activeFaqItem: 1,
       lottieAnimation: null,
+      smartLottieAnimation: null,
       currentAnimationIndex: 0,
-      animationFiles: ['/分镜1.json', '/分镜2.json']
+      smartCurrentAnimationIndex: 0,
+      animationFiles: ['/分镜1.json', '/分镜2.json','/分镜3.json','/分镜4.json','/分镜5.json','/分镜6.json',],
+      smartAnimationFiles: ['/Clear-Deal-Flow.json']
     };
   },
   methods: {
@@ -580,12 +431,48 @@ export default {
           this.initLottieAnimation();
         }, 100);
       });
+    },
+    initSmartLottieAnimation() {
+      // 清除之前的动画实例
+      if (this.smartLottieAnimation) {
+        this.smartLottieAnimation.destroy();
+      }
+
+      // 加载当前动画
+      const animationFile = this.smartAnimationFiles[this.smartCurrentAnimationIndex];
+
+      this.smartLottieAnimation = lottie.loadAnimation({
+        container: this.$refs.smartlottieContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: animationFile,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice', // 保持宽高比并填充容器
+          clearCanvas: true
+        }
+      });
+      // 添加一个短暂的延迟，确保DOM完全更新
+      setTimeout(() => {
+        if (this.smartLottieAnimation) {
+          this.smartLottieAnimation.resize(); // 强制重新计算尺寸
+        }
+      }, 50);
+      // 监听动画完成事件
+      this.smartLottieAnimation.addEventListener('complete', () => {
+        // 在切换动画之前添加短暂的延迟
+        setTimeout(() => {
+          this.smartCurrentAnimationIndex = (this.smartCurrentAnimationIndex + 1) % this.smartAnimationFiles.length;
+          this.initSmartLottieAnimation();
+        }, 100);
+      });
     }
   },
   mounted() {
     // 初始化 Lottie 动画
     this.$nextTick(() => {
       this.initLottieAnimation();
+      this.initSmartLottieAnimation();
     });
     // 添加卡片动画效果
     const cards = document.querySelectorAll('.complexity-card');
@@ -603,6 +490,7 @@ export default {
   beforeUnmount() {
     if (this.lottieAnimation) {
       this.lottieAnimation.destroy();
+      this.smartLottieAnimation.destroy();
     }
   }
 };
