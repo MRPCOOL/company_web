@@ -36,3 +36,14 @@ body {
 .gradient-bg {
   background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
 }
+
+@font-face {
+  font-family: 'TobiasTRIAL';
+  src: url('/font/TobiasTRIAL-Regular-BF6719af6e0eca4.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-TobiasTRIAL {
+  font-family: 'TobiasTRIAL', 'Times New Roman', serif !important;
+}

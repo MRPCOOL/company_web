@@ -2,14 +2,14 @@
   <div class="home">
     <!-- Hero Section -->
     <el-main>
-      <el-row class="hero" :gutter="24">
+      <el-row class="hero " :gutter="24">
         <el-col :span="24">
           <div class="container text-center hero-container">
             <el-text class="subtitle">
               <el-image src="/public/images/Nia.png" :width="32" :height="37" class="align-middle mr-2" />Influencer
               collab AI agent
             </el-text>
-            <el-text tag="h1" class="text-5xl font-bold mb-4 block hero-title">
+            <el-text tag="h1" class="text-5xl font-bold mb-4 block hero-title font-TobiasTRIAL">
               <span class="fade-in-text" style="animation-delay: 0s;">Automate every </span>
               <span class="fade-in-text" style="animation-delay: 0.2s;">brand </span>
               <el-image src="/public/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
@@ -23,7 +23,7 @@
               <span class="fade-in-text" style="animation-delay: 1.2s;color: #FF8896;"> to </span>
               <span class="income-gradient fade-in-text" style="animation-delay: 1.4s;">income</span>
             </el-text>
-            <div class="mt-8 mb-16">
+            <div class="mt-8 mb-16 font-TobiasTRIAL">
               <el-button size="large" class="cta-button bg-black text-white">Start Your 7 Day Free Trial
                 ($19.99)</el-button>
             </div>
@@ -71,7 +71,7 @@
         <el-col :span="24">
           <el-container class="container no-manager-container">
             <el-text class="no-manager-left">
-              <el-text tag="h2" class="no-manager-title">
+              <el-text tag="h2" class="no-manager-title font-TobiasTRIAL">
                 No Manager?
                 <br />No Problem.
                 <br />All in Colla.
@@ -104,7 +104,7 @@
       <el-row class="inbox-complexity-section ">
         <el-col :span="24">
           <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 font-TobiasTRIAL">
               <el-text tag="h2" class="section-title">
                 Inbox complexity is stealing
                 <br />your time and money
@@ -117,9 +117,9 @@
                     <!-- Card 1 - Too many emails -->
                     <el-card class="complexity-card" shadow="hover"
                       style="height: 100%;display: flex; flex-direction: column;min-height: 430px;">
-                      <div class="card-icon">
+                      <div class="card-icon ">
                         <el-image src="/images/notebook.png" style="width: 20px;height: 20px;" />
-                        <el-text tag="h3" class="card-title">
+                        <el-text tag="h3" class="card-title font-TobiasTRIAL">
                           Too many emails. Too<br /> much wasted time.
                         </el-text>
                         <el-text tag="p" class="card-description">
@@ -136,7 +136,7 @@
                       <div class="card-icon">
                         <el-image src="/images/clock.png" style="width: 20px;height: 20px;" />
                         <div style="display: flex;">
-                          <el-text tag="h3" class="card-title">
+                          <el-text tag="h3" class="card-title font-TobiasTRIAL">
                             Every slow reply is <br />a lost chance.
                           </el-text>
                           <el-image src="/images/hours.png"
@@ -157,7 +157,7 @@
                     style="height: 97%; display: flex; flex-direction: column;">
                     <div class="card-icon">
                       <el-image src="/images/pencil.png" style="width: 20px;height: 20px;" />
-                      <el-text tag="h3" class="card-title">
+                      <el-text tag="h3" class="card-title font-TobiasTRIAL">
                         Repetition kills productivity.<br /> Automation restores it.
                       </el-text>
                       <div style="display: flex;margin-top: -20px;">
@@ -177,7 +177,7 @@
                 <el-card class="complexity-card " shadow="hover" style="height: 40%;min-height: 356px;">
                   <div class="card-icon">
                     <el-image src="/images/warning.png" style="width: 20px;height: 20px;" />
-                    <el-text tag="h3" class="card-title">
+                    <el-text tag="h3" class="card-title font-TobiasTRIAL">
                       Struggle to negotiate?
                       <br /> Lose the price you deserve.
                     </el-text>
@@ -192,7 +192,7 @@
                 <el-card class="complexity-card" shadow="hover" style="height: 60%;margin-top: 20px;min-height: 360px;">
                   <div class="card-icon">
                     <el-image src="/images/document.png" style="width: 20px;height: 20px;" />
-                    <el-text tag="h3" class="card-title">
+                    <el-text tag="h3" class="card-title font-TobiasTRIAL">
                       Struggle with contracts?<br />
                       Unequal contracts can<br />
                       harm your rights.
@@ -217,8 +217,8 @@
       <el-row class="py-16">
         <el-col :span="24">
           <div class="container">
-            <div class="text-center mb-12">
-              <el-text tag="h2" class="text-3xl font-bold block">
+            <div class="text-center mb-5 font-TobiasTRIAL">
+              <el-text tag="h2" class="section-title">
                 Nia, The Smart Email Closer
                 <br />Work Less, Earn More
               </el-text>
@@ -243,8 +243,9 @@
       <el-row class="py-16 testimonials-section">
         <el-col :span="24">
           <div class="testimonials-container">
-            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block">
-              What Do KOLs <img src="/images/img.png" alt="KOL" style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say?
+            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL">
+              What Do KOLs <img src="/images/img.png" alt="KOL"
+                style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say?
             </el-text>
             <div class="testimonial-carousel-2row-wrapper">
               <!-- 第一行：从右往左滚动 -->
@@ -263,7 +264,8 @@
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Co-branding</div>
                         <div class="brand-stack">
-                          <div v-for="(logo, i) in item.coBranding" :key="i" class="brand-stack-img" :style="{zIndex: 10-i, left: `${i*18}px`}" >
+                          <div v-for="(logo, i) in item.coBranding" :key="i" class="brand-stack-img"
+                            :style="{ zIndex: 10 - i, left: `${i * 18}px` }">
                             <img :src="logo" />
                           </div>
                         </div>
@@ -297,7 +299,8 @@
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Co-branding</div>
                         <div class="brand-stack">
-                          <div v-for="(logo, i) in item.coBranding" :key="i" class="brand-stack-img" :style="{zIndex: 10-i, left: `${i*18}px`}" >
+                          <div v-for="(logo, i) in item.coBranding" :key="i" class="brand-stack-img"
+                            :style="{ zIndex: 10 - i, left: `${i * 18}px` }">
                             <img :src="logo" />
                           </div>
                         </div>
@@ -759,12 +762,14 @@ export default {
     transform: translateY(0);
   }
 }
+
 .full-width-image {
   width: 100%;
   height: auto;
   display: block;
   padding-top: 4rem;
 }
+
 .control-section {
   padding-top: 20rem;
 }
@@ -1575,18 +1580,21 @@ export default {
   flex-direction: column;
   gap: 24px;
 }
+
 .testimonial-carousel-2row {
   width: 100%;
   overflow: hidden;
   position: relative;
   user-select: none;
 }
+
 .testimonial-carousel-track {
   display: flex;
   flex-wrap: nowrap;
   transition: none;
   will-change: transform;
 }
+
 .testimonial-card-custom2 {
   min-width: 350px;
   max-width: 370px;
@@ -1597,7 +1605,7 @@ export default {
   border: 2px solid #e5e7eb;
   border-radius: 18px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s, border-color 0.2s;
   padding: 24px 20px;
   overflow: hidden;
@@ -1605,13 +1613,16 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 .testimonial-card-custom2:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
   border-color: #FF6E24;
 }
+
 .testimonial-card-custom2 .flex.items-center.mb-2 {
   margin-bottom: 12px;
 }
+
 .testimonial-content {
   word-break: break-all;
   white-space: normal;
@@ -1623,11 +1634,13 @@ export default {
   -webkit-box-orient: vertical;
   margin-bottom: auto;
 }
+
 .testimonial-card-custom2 .flex.items-center.justify-between.mt-4 {
   margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid #e5e7eb;
 }
+
 .brand-stack {
   position: relative;
   height: 28px;
@@ -1635,6 +1648,7 @@ export default {
   align-items: center;
   margin-left: 0;
 }
+
 .brand-stack-img {
   position: absolute;
   top: 0;
@@ -1646,6 +1660,7 @@ export default {
   background: #eee;
   transition: z-index 0.2s;
 }
+
 .brand-stack-img img {
   width: 100%;
   height: 100%;
@@ -1696,7 +1711,7 @@ export default {
   border: 2px solid #e5e7eb;
   border-radius: 18px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s, border-color 0.2s;
   padding: 24px 20px;
   overflow: hidden;
