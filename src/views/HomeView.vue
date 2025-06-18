@@ -92,7 +92,7 @@
             <el-main class="no-manager-right">
               <div class="meet-nia-wrapper">
                 <div class="meet-nia-container">
-                  <el-image src="/images/MeetNia.png" class="meet-nia-full-image" />
+                  <div ref="lottieContainer" class="meet-nia-full-image"></div>
                 </div>
               </div>
             </el-main>
@@ -517,6 +517,7 @@
 
 <script>
 import { Check, Message, Share, Star, Plus, Close, Notebook, Clock, Warning, Document, Edit } from '@element-plus/icons-vue';
+import lottie from 'lottie-web';
 
 export default {
   name: 'HomeView',
@@ -535,15 +536,57 @@ export default {
   },
   data() {
     return {
-      activeFaqItem: 1
+      activeFaqItem: 1,
+      lottieAnimation: null,
+      currentAnimationIndex: 0,
+      animationFiles: ['分镜1.json', '分镜2.json']
     };
   },
   methods: {
     toggleFaq(index) {
       this.activeFaqItem = this.activeFaqItem === index ? null : index;
+    },
+    initLottieAnimation() {
+      // 清除之前的动画实例
+      if (this.lottieAnimation) {
+        this.lottieAnimation.destroy();
+      }
+
+      // 加载当前动画
+      const animationFile = this.animationFiles[this.currentAnimationIndex];
+
+      this.lottieAnimation = lottie.loadAnimation({
+        container: this.$refs.lottieContainer,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: animationFile,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice', // 保持宽高比并填充容器
+          clearCanvas: true
+        }
+      });
+      // 添加一个短暂的延迟，确保DOM完全更新
+      setTimeout(() => {
+        if (this.lottieAnimation) {
+          this.lottieAnimation.resize(); // 强制重新计算尺寸
+        }
+      }, 50);
+      // 监听动画完成事件
+      this.lottieAnimation.addEventListener('complete', () => {
+        // 在切换动画之前添加短暂的延迟
+        setTimeout(() => {
+          this.currentAnimationIndex = (this.currentAnimationIndex + 1) % this.animationFiles.length;
+          this.initLottieAnimation();
+        }, 100);
+      });
     }
   },
   mounted() {
+    // 初始化 Lottie 动画
+    this.$nextTick(() => {
+      this.initLottieAnimation();
+    });
     // 添加卡片动画效果
     const cards = document.querySelectorAll('.complexity-card');
     cards.forEach((card, index) => {
@@ -556,6 +599,11 @@ export default {
         card.style.transform = 'translateY(0)';
       }, 100 * index);
     });
+  },
+  beforeUnmount() {
+    if (this.lottieAnimation) {
+      this.lottieAnimation.destroy();
+    }
   }
 };
 </script>
@@ -1057,12 +1105,14 @@ export default {
   overflow: hidden;
   position: relative;
   z-index: 4;
+  height: 443px;
 }
 
 .meet-nia-full-image {
   width: 100%;
   display: block;
   max-height: 443px;
+  background-color: transparent;
 }
 
 .k12-card,
