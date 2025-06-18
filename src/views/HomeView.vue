@@ -245,7 +245,7 @@
       <el-row class="py-16 testimonials-section">
         <el-col :span="24">
           <div class="testimonials-container">
-            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL">
+            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL" style="color: black;font-size: 50px">
               What Do KOLs <img src="/images/img.png" alt="KOL"
                 style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say?
             </el-text>
@@ -257,11 +257,11 @@
                     <div class="flex items-center mb-2">
                       <el-avatar :size="40" :src="item.avatar"></el-avatar>
                       <div class="ml-3">
-                        <el-text tag="h4" class="font-semibold">{{ item.name }}</el-text>
-                        <el-text tag="p" class="text-sm text-gray-500">{{ item.email }}</el-text>
+                        <el-text tag="h4" class="font-semibold" style="font-size: 14px;color: #1A130E">{{ item.name }}</el-text>
+                        <el-text tag="p" class="text-sm text-gray-500" style="font-size: 12px;">{{ item.email }}</el-text>
                       </div>
                     </div>
-                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content">{{ item.content }}</el-text>
+                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content" style="color:#48423e; font-size: 14px;">{{ item.content }}</el-text>
                     <div class="flex items-center justify-between mt-4">
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Co-branding</div>
@@ -274,11 +274,11 @@
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">incomes</div>
-                        <div class="text-green-500 font-bold text-base">+${{ item.incomes }}</div>
+                        <div class="text-green-500 font-bold text-base" style="font-size: 16px;">+${{ item.incomes }}</div>
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Processing time</div>
-                        <div class="text-black font-bold text-base">-{{ item.processingTime }}%</div>
+                        <div class="text-black font-bold text-base" style="font-size: 16px;">-{{ item.processingTime }}%</div>
                       </div>
                     </div>
                   </div>
@@ -292,11 +292,11 @@
                     <div class="flex items-center mb-2">
                       <el-avatar :size="40" :src="item.avatar"></el-avatar>
                       <div class="ml-3">
-                        <el-text tag="h4" class="font-semibold">{{ item.name }}</el-text>
-                        <el-text tag="p" class="text-sm text-gray-500">{{ item.email }}</el-text>
+                        <el-text tag="h4" class="font-semibold" style="font-size: 14px;color: #1A130E">{{ item.name }}</el-text>
+                        <el-text tag="p" class="text-sm text-gray-500" style="font-size: 12px;">{{ item.email }}</el-text>
                       </div>
                     </div>
-                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content">{{ item.content }}</el-text>
+                    <el-text tag="p" class="text-gray-700 mb-2 testimonial-content" style="color:#48423e; font-size: 14px;">{{ item.content }}</el-text>
                     <div class="flex items-center justify-between mt-4">
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Co-branding</div>
@@ -309,11 +309,11 @@
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">incomes</div>
-                        <div class="text-green-500 font-bold text-base">+${{ item.incomes }}</div>
+                        <div class="text-green-500 font-bold text-base" style="font-size: 16px;">+${{ item.incomes }}</div>
                       </div>
                       <div>
                         <div class="text-xs text-gray-500 mb-1">Processing time</div>
-                        <div class="text-black font-bold text-base">-{{ item.processingTime }}%</div>
+                        <div class="text-black font-bold text-base" style="font-size: 16px;">-{{ item.processingTime }}%</div>
                       </div>
                     </div>
                   </div>
@@ -439,8 +439,8 @@ export default {
           name: 'Jerome Bell',
           email: 'jerome.bell@gmail.com',
           content: 'Colla has saved me a lot of time, and brand cooperation has become well-organized!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png'],
+          avatar: '/co-branding/1.png',
+          coBranding: ['/img/1.png', '/img/2.png', '/img/3.png'],
           incomes: 492,
           processingTime: 50
         },
@@ -448,8 +448,8 @@ export default {
           name: 'Wade Warren',
           email: 'wade.fox@gmail.com',
           content: 'There used to be too many emails, but now everything is automated and my income has also increased!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png', '/brand4.png'],
+          avatar: '/co-branding/2.png',
+          coBranding: ['/img/4.png', '/img/5.png', '/img/6.png', '/img/7.png'],
           incomes: 492,
           processingTime: 63
         },
@@ -457,8 +457,8 @@ export default {
           name: 'Jane Cooper',
           email: 'Jane.cc@gmail.com',
           content: 'Colla makes my collaboration process more efficient. I highly recommend it to every creator!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png'],
+          avatar: '/co-branding/3.png',
+          coBranding: ['/img/8.png', '/img/9.png'],
           incomes: 122,
           processingTime: 53
         },
@@ -466,8 +466,8 @@ export default {
           name: 'Floyd Miles',
           email: 'Floyd.miles@gmail.com',
           content: 'The automatic reply and contract management are extremely convenient. Highly recommended!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png', '/brand4.png'],
+          avatar: '/co-branding/4.png',
+          coBranding: ['/img/10.png', '/img/11.png', '/img/1.png', '/img/2.png'],
           incomes: 492,
           processingTime: 63
         },
@@ -475,8 +475,8 @@ export default {
           name: 'Leslie Alexander',
           email: 'Leslie.aa@gmail.com',
           content: 'You no longer have to worry about missing out on important collaborations. Colla is simply amazing!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png'],
+          avatar: '/co-branding/5.png',
+          coBranding: ['/img/3.png', '/img/4.png'],
           incomes: 122,
           processingTime: 53
         }
@@ -486,8 +486,8 @@ export default {
           name: 'Cody Fisher',
           email: 'Cody.cc@gmail.com',
           content: 'Brand management and revenue statistics are clearly presented, and efficiency has significantly improved.',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png'],
+          avatar: '/co-branding/6.png',
+          coBranding: ['/img/5.png', '/img/6.png'],
           incomes: 122,
           processingTime: 53
         },
@@ -495,8 +495,8 @@ export default {
           name: 'Jenny Wilson',
           email: 'jenny.wilson@gmail.com',
           content: 'Colla\'s automation features allow me to have more time to focus on my creative work.',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png'],
+          avatar: '/co-branding/7.png',
+          coBranding: ['/img/7.png', '/img/8.png', '/img/9.png'],
           incomes: 320,
           processingTime: 40
         },
@@ -504,8 +504,8 @@ export default {
           name: 'Kristin Watson',
           email: 'kristin.watson@gmail.com',
           content: 'One-click management of cooperative brands, with processing speed significantly enhanced!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png', '/brand4.png'],
+          avatar: '/co-branding/8.png',
+          coBranding: ['/img/10.png', '/img/11.png', '/img/1.png', '/img/2.png'],
           incomes: 600,
           processingTime: 70
         },
@@ -513,8 +513,8 @@ export default {
           name: 'Guy Hawkins',
           email: 'guy.hawkins@gmail.com',
           content: 'Colla has made our teamwork more smooth and reliable.',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png'],
+          avatar: '/co-branding/9.png',
+          coBranding: ['/img/3.png', '/img/4.png'],
           incomes: 210,
           processingTime: 35
         },
@@ -522,8 +522,8 @@ export default {
           name: 'Brooklyn Simmons',
           email: 'brooklyn.simmons@gmail.com',
           content: 'User-friendly interface, powerful functions, and fully automated cooperation process!',
-          avatar: '/avatar-placeholder.png',
-          coBranding: ['/brand1.png', '/brand2.png', '/brand3.png'],
+          avatar: '/co-branding/10.png',
+          coBranding: ['/img/5.png', '/img/6.png', '/img/7.png'],
           incomes: 350,
           processingTime: 45
         }
