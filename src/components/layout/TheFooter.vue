@@ -8,7 +8,7 @@
               <el-image src="/images/colla_logo.png" alt="Colla Logo" class="logo-img"></el-image>
             </div>
             <div class="footer-copyright">
-              © 2025 Missive ·
+              © 2025 Coolla ·
               <router-link to="/privacy" class="footer-link">Privacy Policy</router-link> ·
               <router-link to="/terms" class="footer-link">Terms & Conditions</router-link>
             </div>
