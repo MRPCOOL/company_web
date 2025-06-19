@@ -45,10 +45,14 @@ body {
 }
 
 .font-TobiasTRIAL {
+  color: #1A130E;
   font-family: 'TobiasTRIAL', 'Times New Roman', serif !important;
 }
 
 .el-main {
   --el-main-padding: 0;    /* reset their CSS variable */
-  padding: 0 !important;   /* force it to zero */
+  padding: 0 !important; /* force it to zero */
+  }  
+.font-PPTelegraf {
+  font-family: 'PPTelegraf', sans-serif;
 }

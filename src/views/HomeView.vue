@@ -6,19 +6,19 @@
         <el-col :span="24">
           <div class="container text-center hero-container">
             <el-text class="subtitle">
-              <el-image src="/public/images/Nia.png" :width="32" :height="37" class="align-middle mr-2" />Influencer
+              <el-image src="/images/Nia.png" :width="32" :height="37" class="align-middle mr-2" />Influencer
               collab AI agent
             </el-text>
             <el-text tag="h1" class="text-5xl font-bold mb-4 block hero-title font-TobiasTRIAL">
               <span class="fade-in-text" style="animation-delay: 0s;">Automate every </span>
               <span class="fade-in-text" style="animation-delay: 0.2s;">brand </span>
-              <el-image src="/public/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
+              <el-image src="/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
   height: 94px;vertical-align: middle; animation-delay: 0.3s;" />
               <span class="fade-in-text" style="animation-delay: 0.4s;"> collab,</span>
               <br />
               <span class="fade-in-text" style="animation-delay: 0.6s;">from </span>
               <span class=" fade-in-text" style="animation-delay: 0.8s;color: #FF6E24;">inbox</span>
-              <el-image src="/public/images/inbox_img.png" class="fade-in-image" style="display: inline-block; width: 115px;
+              <el-image src="/images/inbox_img.png" class="fade-in-image" style="display: inline-block; width: 115px;
   height: 90px;vertical-align: middle; animation-delay: 1s;" />
               <span class="fade-in-text" style="animation-delay: 1.2s;color: #FF8896;"> to </span>
               <span class="income-gradient fade-in-text" style="animation-delay: 1.4s;">income</span>
@@ -54,7 +54,7 @@
               </el-col>
 
               <el-col :xs="24" :md="8"
-                style="background-image: url('/images/80%.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
+                style="background-image: url('/images/80.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
                 <!-- <el-card class="stat-card stat-card-pink" shadow="hover">
                   <div class="stat-icon time-icon"></div>
                   <div class="down-arrow"></div>
@@ -227,15 +227,38 @@
               </el-text>
             </div>
             <!-- Features Grid -->
-            <div ref="smartlottieContainer" class="meet-nia-full-image"></div>
-            <div ref="smartlottieContainer2" class="meet-nia-full-image"></div>
+            <div ref="smartlottieContainer" class="meet-nia-full-image1">
+              <!-- <div class="smart-email-container">
+                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  From Inbox Chaos To <br /> Clear Deal Flow
+                </el-text>
+                <el-text tag="p" class="smart-email-text font-PPTelegraf">
+                  Automatically filters and classifies brand emails, turns<br />
+                  messages into clear deal summaries — Nia is your <br />
+                  smart brand assistant.
+                </el-text>
+              </div> -->
+            </div>
+            <div ref="smartlottieContainer2" class="meet-nia-full-image2">
+              <!-- <div class="smart-email-container2">
+                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  From Inbox Chaos To <br /> Clear Deal Flow
+                </el-text>
+                <el-text tag="p" class="smart-email-text font-PPTelegraf">
+                  Automatically filters and classifies brand emails, turns<br />
+                  messages into clear deal summaries — Nia is your <br />
+                  smart brand assistant.
+                </el-text>
+              </div> -->
+
+            </div>
             <el-image src="/images/smart3.png" class="meet-nia-full-image"></el-image>
             <el-image src="/images/smart4.png" class="meet-nia-full-image"></el-image>
             <el-image src="/images/smart6.png" class="meet-nia-full-image"></el-image>
 
           </div>
           <el-text tag="p" class="text-center mb-5 font-TobiasTRIAL gradient-text-3color ">
-            <el-image src="/images/miniNia.png" class ="niasmall"/>
+            <el-image src="/images/miniNia.png" class="niasmall" />
             Stay tuned for more…
           </el-text>
         </el-col>
@@ -245,7 +268,7 @@
       <el-row class="py-16 control-section">
         <el-col :span="24">
 
-          <el-image src="/public/images/controlEverything.png" class="full-width-image" fit="cover"></el-image>
+          <el-image src="/images/controlEverything.png" class="full-width-image" fit="cover"></el-image>
 
         </el-col>
       </el-row>
@@ -817,10 +840,12 @@ export default {
     transform: translateY(0);
   }
 }
-.niasmall{
+
+.niasmall {
 
   transform: translateY(65px);
 }
+
 .full-width-image {
   width: 100%;
   height: auto;
@@ -1250,12 +1275,38 @@ export default {
   height: 443px;
 }
 
-.meet-nia-full-image {
+.meet-nia-full-image,
+.meet-nia-full-image1,
+.meet-nia-full-image2 {
   width: 100%;
   display: block;
   background-color: transparent;
   margin-top: 32px;
 }
+
+.meet-nia-full-image1,
+.meet-nia-full-image2 {
+  position: relative;
+}
+
+.smart-email-container2 {
+  position: relative;
+  top: -350px;
+  left: 10%;
+  z-index: 2;
+  max-width: 90%;
+  width: 100%;
+}
+
+.smart-email-container {
+  position: relative;
+  top: 350px;
+  left: 10%;
+  z-index: 2;
+  max-width: 90%;
+  width: 100%;
+}
+
 
 .k12-card,
 .higher-education-card,
@@ -1875,5 +1926,11 @@ export default {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 110, 36, 0.4);
   background: linear-gradient(90deg, #FF8540 0%, #FFA0A8 100%);
+}
+
+.smart-email-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A130E;
 }
 </style>
