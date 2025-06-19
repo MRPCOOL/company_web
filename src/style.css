@@ -45,5 +45,10 @@ body {
 }
 
 .font-TobiasTRIAL {
+  color: #1A130E;
   font-family: 'TobiasTRIAL', 'Times New Roman', serif !important;
+}
+
+.font-PPTelegraf {
+  font-family: 'PPTelegraf', sans-serif;
 }

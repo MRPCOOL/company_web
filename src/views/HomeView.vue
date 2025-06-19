@@ -227,15 +227,38 @@
               </el-text>
             </div>
             <!-- Features Grid -->
-            <div ref="smartlottieContainer" class="meet-nia-full-image"></div>
-            <div ref="smartlottieContainer2" class="meet-nia-full-image"></div>
+            <div ref="smartlottieContainer" class="meet-nia-full-image1">
+              <!-- <div class="smart-email-container">
+                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  From Inbox Chaos To <br /> Clear Deal Flow
+                </el-text>
+                <el-text tag="p" class="smart-email-text font-PPTelegraf">
+                  Automatically filters and classifies brand emails, turns<br />
+                  messages into clear deal summaries — Nia is your <br />
+                  smart brand assistant.
+                </el-text>
+              </div> -->
+            </div>
+            <div ref="smartlottieContainer2" class="meet-nia-full-image2">
+              <!-- <div class="smart-email-container2">
+                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  From Inbox Chaos To <br /> Clear Deal Flow
+                </el-text>
+                <el-text tag="p" class="smart-email-text font-PPTelegraf">
+                  Automatically filters and classifies brand emails, turns<br />
+                  messages into clear deal summaries — Nia is your <br />
+                  smart brand assistant.
+                </el-text>
+              </div> -->
+
+            </div>
             <el-image src="/images/smart3.png" class="meet-nia-full-image"></el-image>
             <el-image src="/images/smart4.png" class="meet-nia-full-image"></el-image>
             <el-image src="/images/smart6.png" class="meet-nia-full-image"></el-image>
 
           </div>
           <el-text tag="p" class="text-center mb-5 font-TobiasTRIAL gradient-text-3color ">
-            <el-image src="/images/miniNia.png" class ="niasmall"/>
+            <el-image src="/images/miniNia.png" class="niasmall" />
             Stay tuned for more…
           </el-text>
         </el-col>
@@ -816,10 +839,12 @@ export default {
     transform: translateY(0);
   }
 }
-.niasmall{
+
+.niasmall {
 
   transform: translateY(65px);
 }
+
 .full-width-image {
   width: 100%;
   height: auto;
@@ -1249,12 +1274,38 @@ export default {
   height: 443px;
 }
 
-.meet-nia-full-image {
+.meet-nia-full-image,
+.meet-nia-full-image1,
+.meet-nia-full-image2 {
   width: 100%;
   display: block;
   background-color: transparent;
   margin-top: 32px;
 }
+
+.meet-nia-full-image1,
+.meet-nia-full-image2 {
+  position: relative;
+}
+
+.smart-email-container2 {
+  position: relative;
+  top: -350px;
+  left: 10%;
+  z-index: 2;
+  max-width: 90%;
+  width: 100%;
+}
+
+.smart-email-container {
+  position: relative;
+  top: 350px;
+  left: 10%;
+  z-index: 2;
+  max-width: 90%;
+  width: 100%;
+}
+
 
 .k12-card,
 .higher-education-card,
@@ -1871,5 +1922,11 @@ export default {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 110, 36, 0.4);
   background: linear-gradient(90deg, #FF8540 0%, #FFA0A8 100%);
+}
+
+.smart-email-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A130E;
 }
 </style>
