@@ -228,7 +228,7 @@
             </div>
             <!-- Features Grid -->
             <div ref="smartlottieContainer" class="meet-nia-full-image1">
-              <!-- <div class="smart-email-container">
+              <div class="smart-email-container">
                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
                   From Inbox Chaos To <br /> Clear Deal Flow
                 </el-text>
@@ -237,19 +237,19 @@
                   messages into clear deal summaries — Nia is your <br />
                   smart brand assistant.
                 </el-text>
-              </div> -->
+              </div>
             </div>
             <div ref="smartlottieContainer2" class="meet-nia-full-image2">
-              <!-- <div class="smart-email-container2">
-                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
-                  From Inbox Chaos To <br /> Clear Deal Flow
+              <div class="smart-email-container2">
+                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  Personal Smart Reply.  <br /> Professional smart Reply.
                 </el-text>
                 <el-text tag="p" class="smart-email-text font-PPTelegraf">
-                  Automatically filters and classifies brand emails, turns<br />
-                  messages into clear deal summaries — Nia is your <br />
-                  smart brand assistant.
+                  Use your context across emails—privately, transparently, <br/>and under your control. It sounds like you.<br/>
+                  Backed by expert tactics and rich brand–KOL data—it's <br/> not just like you, it's smarter.<br/>
+                  More successful deals. Better rates.<br/>
                 </el-text>
-              </div> -->
+              </div>
 
             </div>
             <el-image src="/images/smart3.png" class="meet-nia-full-image"></el-image>
@@ -1284,11 +1284,12 @@ export default {
 .meet-nia-full-image1,
 .meet-nia-full-image2 {
   position: relative;
+  height: 522px;
 }
 
 .smart-email-container2 {
   position: relative;
-  top: -350px;
+  top: -360px;
   left: 10%;
   z-index: 2;
   max-width: 90%;
@@ -1297,7 +1298,7 @@ export default {
 
 .smart-email-container {
   position: relative;
-  top: 350px;
+  top: -360px;
   left: 10%;
   z-index: 2;
   max-width: 90%;
