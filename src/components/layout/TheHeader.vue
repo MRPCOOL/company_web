@@ -79,11 +79,11 @@ const isMobileMenuOpen = ref(false);
 <style scoped>
 /* Header Styles */
 .header {
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fffdfb;
   position: sticky;
   top: 0;
   z-index: 50;
+  height:72px;
 }
 
 .header-container {

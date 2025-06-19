@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- Hero Section -->
-    <el-main>
+    <el-main style="padding: 0;">
       <el-row class="hero " :gutter="24">
         <el-col :span="24">
           <div class="container text-center hero-container">
@@ -740,6 +740,7 @@ export default {
 
 :deep(.el-main) {
   padding: 0 !important;
+  --el-main-padding: 0 !important;
   overflow: hidden;
 }
 
@@ -1833,7 +1834,7 @@ export default {
 
 /* CTA Section Styles */
 .cta-section {
-  background-image: url('/images/startedNow.png');
+  background-image: url('/public/images/startedNow.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1842,7 +1843,10 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0;
 }
 
 .cta-container {

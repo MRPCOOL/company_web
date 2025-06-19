@@ -47,3 +47,8 @@ body {
 .font-TobiasTRIAL {
   font-family: 'TobiasTRIAL', 'Times New Roman', serif !important;
 }
+
+.el-main {
+  --el-main-padding: 0;    /* reset their CSS variable */
+  padding: 0 !important;   /* force it to zero */
+}
