@@ -6,19 +6,19 @@
         <el-col :span="24">
           <div class="container text-center hero-container">
             <el-text class="subtitle">
-              <el-image src="/public/images/Nia.png" :width="32" :height="37" class="align-middle mr-2" />Influencer
+              <el-image src="/images/Nia.png" :width="32" :height="37" class="align-middle mr-2" />Influencer
               collab AI agent
             </el-text>
             <el-text tag="h1" class="text-5xl font-bold mb-4 block hero-title font-TobiasTRIAL">
               <span class="fade-in-text" style="animation-delay: 0s;">Automate every </span>
               <span class="fade-in-text" style="animation-delay: 0.2s;">brand </span>
-              <el-image src="/public/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
+              <el-image src="/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
   height: 94px;vertical-align: middle; animation-delay: 0.3s;" />
               <span class="fade-in-text" style="animation-delay: 0.4s;"> collab,</span>
               <br />
               <span class="fade-in-text" style="animation-delay: 0.6s;">from </span>
               <span class=" fade-in-text" style="animation-delay: 0.8s;color: #FF6E24;">inbox</span>
-              <el-image src="/public/images/inbox_img.png" class="fade-in-image" style="display: inline-block; width: 115px;
+              <el-image src="/images/inbox_img.png" class="fade-in-image" style="display: inline-block; width: 115px;
   height: 90px;vertical-align: middle; animation-delay: 1s;" />
               <span class="fade-in-text" style="animation-delay: 1.2s;color: #FF8896;"> to </span>
               <span class="income-gradient fade-in-text" style="animation-delay: 1.4s;">income</span>
@@ -54,7 +54,7 @@
               </el-col>
 
               <el-col :xs="24" :md="8"
-                style="background-image: url('/images/80%.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
+                style="background-image: url('/images/80.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
                 <!-- <el-card class="stat-card stat-card-pink" shadow="hover">
                   <div class="stat-icon time-icon"></div>
                   <div class="down-arrow"></div>
@@ -245,7 +245,7 @@
       <el-row class="py-16 control-section">
         <el-col :span="24">
 
-          <el-image src="/public/images/controlEverything.png" class="full-width-image" fit="cover"></el-image>
+          <el-image src="/images/controlEverything.png" class="full-width-image" fit="cover"></el-image>
 
         </el-col>
       </el-row>
