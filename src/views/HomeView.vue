@@ -237,13 +237,14 @@
             </div>
             <div ref="smartlottieContainer2" class="meet-nia-full-image2">
               <div class="smart-email-container2">
-                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
-                  Personal Smart Reply.  <br /> Professional smart Reply.
+                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  Personal Smart Reply. <br /> Professional smart Reply.
                 </el-text>
                 <el-text tag="p" class="smart-email-text font-PPTelegraf">
-                  Use your context across emails—privately, transparently, <br/>and under your control. It sounds like you.<br/>
-                  Backed by expert tactics and rich brand–KOL data—it's <br/> not just like you, it's smarter.<br/>
-                  More successful deals. Better rates.<br/>
+                  Use your context across emails—privately, transparently, <br />and under your control. It sounds like
+                  you.<br />
+                  Backed by expert tactics and rich brand–KOL data—it's <br /> not just like you, it's smarter.<br />
+                  More successful deals. Better rates.<br />
                 </el-text>
               </div>
 
@@ -800,8 +801,8 @@ export default {
 }
 
 .subtitle {
-  font-size: 1.125rem;
-  color: #666;
+  font-size: 32px;
+  color: #1A130E 80%;
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -1268,25 +1269,27 @@ export default {
   height: 443px;
 }
 
-.meet-nia-full-image{
+.meet-nia-full-image {
   width: 100%;
   display: block;
   background-color: transparent;
   margin-top: 32px;
 }
-.meet-nia-full-image1
- {
+
+.meet-nia-full-image1 {
   width: 100%;
   display: block;
   background-color: transparent;
   margin-top: -184px;
 }
+
 .meet-nia-full-image2 {
   width: 100%;
   display: block;
   background-color: transparent;
   margin-top: -189px;
 }
+
 .meet-nia-full-image1,
 .meet-nia-full-image2 {
   position: relative;
@@ -1525,7 +1528,6 @@ export default {
   font-size: 24px;
   margin-right: 32px;
   padding: 40px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 .complexity-card :deep(.el-card__body) {
