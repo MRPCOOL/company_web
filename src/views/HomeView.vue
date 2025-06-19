@@ -365,7 +365,7 @@
       </el-row>
 
       <!-- FAQ Section -->
-      <el-row class="py-16 bg-gray-50 font-TobiasTRIAL">
+      <el-row class="py-16 font-TobiasTRIAL">
         <el-col :span="24">
           <div class="container">
             <h2 class="fqa-title" style="font-size: 56px;">FQA
