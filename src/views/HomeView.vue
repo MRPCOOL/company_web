@@ -477,7 +477,7 @@ export default {
       currentAnimationIndex: 0,
       smartCurrentAnimationIndex: 0,
       smartCurrentAnimationIndex2: 0,
-      animationFiles: ['/分镜1.json', '/分镜2.json', '/分镜3.json', '/分镜4.json', '/分镜5.json', '/分镜6.json',],
+      animationFiles: ['/coollar_demo.json'],
       smartAnimationFiles: ['/Clear-Deal-Flow.json'],
       smartAnimationFiles2: ['/smart-replied.json'],
       row1Testimonials: [
@@ -1307,7 +1307,7 @@ export default {
 
 .smart-email-container {
   position: relative;
-  top: 360px;
+  top: 340px;
   left: 10%;
   z-index: 2;
   max-width: 90%;
