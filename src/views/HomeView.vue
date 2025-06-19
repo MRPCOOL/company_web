@@ -1237,7 +1237,6 @@ export default {
   font-size: 20px;
   transform: rotate(-30deg);
   z-index: 20;
-  white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1451,7 +1450,6 @@ export default {
 
   .meet-nia-bubble {
     top: -20px;
-    left: 30px;
     z-index: 999;
   }
 
@@ -1790,7 +1788,6 @@ export default {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  background-color: #f9f9f9;
 }
 
 .testimonials-container {
