@@ -113,15 +113,15 @@
                 <br />your time and money
               </el-text>
             </div>
-            <el-row :align="24" style="height: 100%;">
+            <el-row :align="24">
               <el-col :span="16">
-                <el-col :span="24" style="display: flex; height: 57%;">
-                  <el-col :span="12" style="height: 100%;">
+                <el-col :span="24" style="display: flex;">
+                  <el-col :span="12">
                     <!-- Card 1 - Too many emails -->
                     <el-card class="complexity-card" shadow="hover"
-                      style="height: 100%;display: flex; flex-direction: column;min-height: 430px;">
-                      <div class="card-icon ">
-                        <el-image src="/images/notebook.png" style="width: 20px;height: 20px;" />
+                      style="display: flex; flex-direction: column; height: 460px; width: 384px; position: relative; overflow: hidden;">
+                      <div class="card-icon">
+                        <el-image src="/images/notebook.png" style="width: 24px; height: 24px; margin-bottom: 16px;" />
                         <el-text tag="h3" class="card-title font-TobiasTRIAL">
                           Too many emails. Too<br /> much wasted time.
                         </el-text>
@@ -129,86 +129,82 @@
                           50+ collab emails hit your inbox daily.<br /> Without automation, that's hours lost.
                         </el-text>
                       </div>
-                      <el-image src="/images/emails.png" style="width: 100%;height: 57%;" />
-                      <!-- <div class="card-image emails-image" style="margin-top: auto;"></div> -->
+                      <el-image src="/images/emails.png"
+                        style="width: 100%;height: 100%;position: absolute; bottom: 0; left: 0; right: 0;" />
                     </el-card>
                   </el-col>
-                  <el-col :span="12" style="display: flex; flex-direction: column;height: 100%;">
+                  <el-col :span="12" style="display: flex; flex-direction: column;">
                     <!-- Card 2 - Slow reply -->
-                    <el-card class="complexity-card" shadow="hover" style="height: 45%;min-height: 180px; ">
+                    <el-card class="complexity-card" shadow="hover"
+                      style="height: 195px;width: 384px; position: relative; overflow: hidden;">
                       <div class="card-icon">
-                        <el-image src="/images/clock.png" style="width: 20px;height: 20px;" />
-                        <div style="display: flex;">
-                          <el-text tag="h3" class="card-title font-TobiasTRIAL">
-                            Every slow reply is <br />a lost chance.
-                          </el-text>
-                          <el-image src="/images/hours.png"
-                            style="width: 20%;height:20%;margin-top: -20px;margin-left: 20px;" class="chat-bubbles" />
-                        </div>
+                        <el-image src="/images/clock.png" style="width: 24px; height: 24px;" />
                       </div>
+                      <el-text tag="h3" class="card-title font-TobiasTRIAL" style="">
+                        Every slow reply is <br />a lost chance.
+                      </el-text>
+                      <el-image src="/images/hours.png"
+                        style="position: absolute; top: 45px; right: 40px;width:100px ;" />
+
                     </el-card>
                     <!-- Card 3 - Hours wasted -->
                     <el-card class="complexity-card hours-card" shadow="hover"
-                      style="height: 51%;margin-top: 20px;min-height: 230px;">
+                      style="height: 230px;margin-top: 32px; width: 384px;">
 
                     </el-card>
                   </el-col>
                 </el-col>
-                <el-col :span="24" style="height: 40%;margin-top: 25px;">
+                <el-col :span="24" style="margin-top: 32px;">
                   <!-- Card 6 - Repetition -->
                   <el-card class="complexity-card wide-card" shadow="hover"
-                    style="height: 97%; display: flex; flex-direction: column;">
+                    style="width: 799px;height: 244px; display: flex; flex-direction: column; position: relative; overflow: hidden;">
                     <div class="card-icon">
-                      <el-image src="/images/pencil.png" style="width: 20px;height: 20px;" />
-                      <el-text tag="h3" class="card-title font-TobiasTRIAL">
-                        Repetition kills productivity.<br /> Automation restores it.
-                      </el-text>
-                      <div style="display: flex;margin-top: -20px;">
-                        <el-text tag="p" class="card-description">
-                          Brand deals involve endless repeats—addresses, quotes, media
-                          <br /> kits. Coolla handles it all in
-                          one
-                          click.
-                        </el-text>
-                        <el-image src="/images/Address.png" style="width: 20%;height:20%;margin-left:20%;" />
-                      </div>
+                      <el-image src="/images/pencil.png" style="width: 24px; height: 24px; " />
                     </div>
+                    <el-text tag="h3" class="card-title font-TobiasTRIAL">
+                      Repetition kills productivity.<br /> Automation restores it.
+                    </el-text>
+                    <el-text tag="p" class="card-description">
+                      Brand deals involve endless repeats—addresses, quotes, media<br />
+                      kits. Coolla handles it all in one click.
+                    </el-text>
+                    <el-image src="/images/Address.png"
+                      style="position: absolute; right: 80px; top: 55%; transform: translateY(-50%); width: 168px; height: 115px;" />
                   </el-card>
                 </el-col>
               </el-col>
-              <el-col :span="8" style="display: flex;flex-direction: column;height: 100%;">
-                <el-card class="complexity-card " shadow="hover" style="height: 40%;min-height: 356px;">
+              <el-col :span="8" style="display: flex;flex-direction: column;">
+                <el-card class="complexity-card" shadow="hover"
+                  style="height: 356px; width: 384px;position: relative; overflow: hidden;">
                   <div class="card-icon">
-                    <el-image src="/images/warning.png" style="width: 20px;height: 20px;" />
-                    <el-text tag="h3" class="card-title font-TobiasTRIAL">
-                      Struggle to negotiate?
-                      <br /> Lose the price you deserve.
-                    </el-text>
-
+                    <el-image src="/images/warning.png" style="width: 24px; height: 24px;" />
                   </div>
-                  <el-row style="justify-content: center;align-items: center;margin-top: 10%;">
-                    <el-image src="/images/lowPrice.png" style="width: 50%;height: 20%;" />
-                  </el-row>
+                  <el-text tag="h3" class="card-title font-TobiasTRIAL">
+                    Struggle to negotiate?
+                    <br /> Lose the price you deserve.
+                  </el-text>
+                  <el-image src="/images/lowPrice.png"
+                    style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);" />
 
                 </el-card>
                 <!-- Card 5 - Contracts -->
-                <el-card class="complexity-card" shadow="hover" style="height: 60%;margin-top: 20px;min-height: 360px;">
+                <el-card class="complexity-card" shadow="hover"
+                  style="margin-top: 32px;width: 384px;height: 349px;background-color: #F9F9F9;border-radius: 24px;padding: 40px;position: relative;overflow: hidden;">
                   <div class="card-icon">
                     <el-image src="/images/document.png" style="width: 20px;height: 20px;" />
-                    <el-text tag="h3" class="card-title font-TobiasTRIAL">
-                      Struggle with contracts?<br />
-                      Unequal contracts can<br />
-                      harm your rights.
-                    </el-text>
-                    <div style="display: flex;margin-top: -40px;">
-                      <el-text tag="p" class="card-description">
-                        Contract review is<br />
-                        time-consuming<br />
-                        and error-prone
-                      </el-text>
-                      <el-image src="/images/contract.png" style="width: 30%;height: 20%;margin-left:20%;" />
-                    </div>
                   </div>
+                  <el-text tag="h3" class="card-title font-TobiasTRIAL">
+                    Struggle with contracts?<br />
+                    Unequal contracts can<br />
+                    harm your rights.
+                  </el-text>
+                  <el-text tag="p" class="card-description">
+                    Contract review is<br />
+                    time-consuming<br />
+                    and error-prone
+                  </el-text>
+                  <el-image src="/images/contract.png"
+                    style="position: absolute; right: 40px; bottom: 20px;width: 153px; height: 250px;" />
                 </el-card>
               </el-col>
             </el-row>
@@ -1495,6 +1491,8 @@ export default {
 .inbox-complexity-section {
   padding: 20px 0;
   padding-bottom: 50px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -1513,10 +1511,12 @@ export default {
 .complexity-card {
   background-color: #f9f9f9;
   border: 1px solid #D6D7DB;
-  border-radius: 16px;
+  border-radius: 24px;
   transition: all 0.3s ease;
   position: relative;
-  margin-right: 12px;
+  font-size: 24px;
+  margin-right: 32px;
+  padding: 40px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
@@ -1532,13 +1532,12 @@ export default {
 .card-icon {
   font-size: 24px;
   color: #333;
-  padding: 20px 40px 0 40px;
+  margin-bottom: 14px;
 }
 
 .card-title {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 16px;
   line-height: 1.3;
   display: block;
 }
@@ -1596,7 +1595,8 @@ export default {
 
 /* Hours card specific styles */
 .hours-card {
-  background-color: #F5D0C5;
+  border: none;
+  border-radius: 24px;
   background-image: url("/images/4days.png");
   background-size: cover;
 }
