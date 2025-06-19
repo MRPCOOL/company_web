@@ -1922,14 +1922,13 @@ export default {
   font-weight: 600;
   border-radius: 12px;
   color: white;
-  box-shadow: 0 4px 20px rgba(255, 110, 36, 0.3);
+  box-shadow: 0 12px 30px #ef815a;
   transition: all 0.3s ease;
   min-width: 200px;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 110, 36, 0.4);
   background: linear-gradient(90deg, #FF8540 0%, #FFA0A8 100%);
 }
 
