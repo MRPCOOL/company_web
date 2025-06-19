@@ -26,7 +26,7 @@
 
         <!-- Get Started Button (Right) -->
         <div class="action-container">
-          <el-button type="primary" class="get-started-btn">
+          <el-button type="primary" class="get-started-btn" disabled>
             Get Started
           </el-button>
 

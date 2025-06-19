@@ -224,7 +224,7 @@
             </div>
             <!-- Features Grid -->
             <div ref="smartlottieContainer" class="meet-nia-full-image1">
-              <!-- <div class="smart-email-container">
+              <div class="smart-email-container">
                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
                   From Inbox Chaos To <br /> Clear Deal Flow
                 </el-text>
@@ -233,19 +233,19 @@
                   messages into clear deal summaries — Nia is your <br />
                   smart brand assistant.
                 </el-text>
-              </div> -->
+              </div>
             </div>
             <div ref="smartlottieContainer2" class="meet-nia-full-image2">
-              <!-- <div class="smart-email-container2">
-                <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
-                  From Inbox Chaos To <br /> Clear Deal Flow
+              <div class="smart-email-container2">
+                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
+                  Personal Smart Reply.  <br /> Professional smart Reply.
                 </el-text>
                 <el-text tag="p" class="smart-email-text font-PPTelegraf">
-                  Automatically filters and classifies brand emails, turns<br />
-                  messages into clear deal summaries — Nia is your <br />
-                  smart brand assistant.
+                  Use your context across emails—privately, transparently, <br/>and under your control. It sounds like you.<br/>
+                  Backed by expert tactics and rich brand–KOL data—it's <br/> not just like you, it's smarter.<br/>
+                  More successful deals. Better rates.<br/>
                 </el-text>
-              </div> -->
+              </div>
 
             </div>
             <el-image src="/images/smart3.png" class="meet-nia-full-image"></el-image>
@@ -364,10 +364,10 @@
       </el-row>
 
       <!-- FAQ Section -->
-      <el-row class="py-16">
+      <el-row class="py-16 bg-gray-50 font-TobiasTRIAL">
         <el-col :span="24">
           <div class="container">
-            <h2 class="fqa-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">FQA
+            <h2 class="fqa-title" style="font-size: 56px;">FQA
             </h2>
 
             <div class="faq-container">
@@ -473,7 +473,7 @@ export default {
       currentAnimationIndex: 0,
       smartCurrentAnimationIndex: 0,
       smartCurrentAnimationIndex2: 0,
-      animationFiles: ['/分镜1.json', '/分镜2.json', '/分镜3.json', '/分镜4.json', '/分镜5.json', '/分镜6.json',],
+      animationFiles: ['/coollar_demo.json'],
       smartAnimationFiles: ['/Clear-Deal-Flow.json'],
       smartAnimationFiles2: ['/smart-replied.json'],
       row1Testimonials: [
@@ -1073,16 +1073,14 @@ export default {
 
 /* FAQ Styles */
 .fqa-title {
-  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: Tobias TRIAL;
   font-weight: 700;
 }
 
 .faq-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -1270,15 +1268,25 @@ export default {
   height: 443px;
 }
 
-.meet-nia-full-image,
-.meet-nia-full-image1,
-.meet-nia-full-image2 {
+.meet-nia-full-image{
   width: 100%;
   display: block;
   background-color: transparent;
   margin-top: 32px;
 }
-
+.meet-nia-full-image1
+ {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  margin-top: -184px;
+}
+.meet-nia-full-image2 {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  margin-top: -189px;
+}
 .meet-nia-full-image1,
 .meet-nia-full-image2 {
   position: relative;
@@ -1286,7 +1294,7 @@ export default {
 
 .smart-email-container2 {
   position: relative;
-  top: -350px;
+  top: 360px;
   left: 10%;
   z-index: 2;
   max-width: 90%;
@@ -1295,7 +1303,7 @@ export default {
 
 .smart-email-container {
   position: relative;
-  top: 350px;
+  top: 340px;
   left: 10%;
   z-index: 2;
   max-width: 90%;
