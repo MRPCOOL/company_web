@@ -368,10 +368,10 @@
       </el-row>
 
       <!-- FAQ Section -->
-      <el-row class="py-16 bg-gray-50">
+      <el-row class="py-16 bg-gray-50 font-TobiasTRIAL">
         <el-col :span="24">
           <div class="container">
-            <h2 class="fqa-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">FQA
+            <h2 class="fqa-title" style="font-size: 56px;">FQA
             </h2>
 
             <div class="faq-container">
@@ -1077,16 +1077,14 @@ export default {
 
 /* FAQ Styles */
 .fqa-title {
-  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: Tobias TRIAL;
   font-weight: 700;
 }
 
 .faq-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
