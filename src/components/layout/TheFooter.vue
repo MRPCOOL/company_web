@@ -9,7 +9,7 @@
             </div>
             <div class="footer-copyright">
               © 2025 Coolla ·
-              <router-link to="/privacy" class="footer-link">Privacy Policy</router-link> ·
+              <a href="/privacypolicy.pdf" class="footer-link" target="_blank">Privacy Policy</a> ·
               <router-link to="/terms" class="footer-link">Terms & Conditions</router-link>
             </div>
             <div class="footer-social">
