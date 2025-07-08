@@ -57,11 +57,12 @@ watch(
   <el-container class="app-container min-h-screen flex flex-col">
     <TheHeader />
     <el-main class="flex-grow">
-      <router-view v-slot="{ Component }">
+      <!-- <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
         </transition>
-      </router-view>
+      </router-view> -->
+      <router-view v-if="!$route.meta.link" :key="key" />
     </el-main>
     <TheFooter />
   </el-container>

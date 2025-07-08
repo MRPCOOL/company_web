@@ -1,6 +1,10 @@
 <template>
   <Header />
   <div class="subscription-container">
+    <div class="topTitle" >
+        <span class="fade-in-text" style="animation-delay: 0s;">Simple </span>
+        <span class="fade-in-text ml-20 caiseT" style="animation-delay: 0.2s;">Pricing </span>
+    </div>
     <el-row :gutter="20">
       <!-- Free Plan Card -->
       <el-col :xs="24" :sm="24" :md="8">
@@ -36,6 +40,7 @@
             <div class="feature spacer"></div>
           </div>
           <el-button class="plan-button current-plan" disabled>Current plan</el-button>
+          <span class="textGray">Cancel any time</span>
         </el-card>
       </el-col>
 
@@ -99,6 +104,7 @@
             </div>
           </div>
           <el-button class="plan-button trial-button" type="primary" color="#f8976a" @click="showSubscriptionPopup">Start 7-Day Free Trial</el-button>
+          <span class="textGray">Cancel any time</span>
         </el-card>
       </el-col>
 
@@ -164,6 +170,7 @@
             </div>
           </div>
           <el-button class="plan-button trial-button" type="primary" color="#f8976a" @click="showSubscriptionPopup">Start 7-Day Free Trial</el-button>
+          <span class="textGray">Cancel any time</span>
         </el-card>
       </el-col>
     </el-row>
@@ -186,9 +193,14 @@ const showSubscriptionPopup = () => {
 
 <style scoped>
 .subscription-container {
-  max-width: 1200px;
+  width:80%;
+  max-width: 1550px;
+  height:calc(100vh - 265px);
   margin: 40px auto;
   padding: 0 20px;
+  background: url(/images/hero_bg.png) center center no-repeat;
+  background-size: auto 100%;
+  overflow: hidden;
 }
 
 .subscription-title {
@@ -200,6 +212,7 @@ const showSubscriptionPopup = () => {
 
 .subscription-card {
   height: 100%;
+  height: calc(100vh - 520px);
   position: relative;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -234,8 +247,9 @@ const showSubscriptionPopup = () => {
 }
 
 .price {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
+  margin-right:10px;
 }
 
 .period {
@@ -304,10 +318,12 @@ const showSubscriptionPopup = () => {
 
 .plan-button {
   width: 100%;
-  padding: 12px;
+  height:60px;
+  padding: 13px 12px;
   font-size: 16px;
   font-weight: 500;
   margin-top: auto;
+  border-radius: 8px;
 }
 
 .current-plan {
@@ -320,5 +336,31 @@ const showSubscriptionPopup = () => {
   background: linear-gradient(90deg, #f8976a 0%, #f8c26a 100%);
   color: white;
   border: none;
+}
+
+.topTitle{
+  width:100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding:48px 0;
+  color: #1A130E;
+  text-align: center;
+  font-family: "Tobias TRIAL";
+  font-size: 86px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7; /* 104.651% */
+}
+.caiseT{
+  background: linear-gradient(92deg, #FF6E24 4.31%, #FF8896 44.17%, #EF9CF0 88.05%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.textGray{
+  color:rgba(114, 118, 129, 0.80);
+  padding:12px;
+  text-align: center;
 }
 </style>
