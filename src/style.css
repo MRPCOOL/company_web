@@ -56,3 +56,59 @@ body {
 .font-PPTelegraf {
   font-family: 'PPTelegraf', sans-serif;
 }
+
+.font-bold{
+  font-size: 400;
+}
+
+.z-666{
+  position: relative;
+  z-index: 666;
+}
+
+.btnBlank{
+  width:320px;
+  height:66px;
+  padding:0 20px;
+  font-size: 20px;
+  line-height:66px;
+  border-radius: 12px;
+  background: #1A130E;
+  margin:0 auto;
+  font-weight: 600;
+  font-family: "Tobias TRIAL";
+}
+
+.mt-64{
+  margin-top:64px;
+}
+
+.mb-72{
+  margin-bottom:72px;
+}
+
+.mt-300{
+  margin-top:300px
+}
+
+.mb-48{
+  margin-bottom:48px;
+}
+.mt-207{
+  margin-top:207px
+}
+
+.mt-15{
+  margin-top:15px;
+}
+
+.faqDiv ul{
+  padding-left:20px;
+}
+.faqDiv ul li::before {
+  content: "•";
+  color: #333;
+  margin-right: 8px;
+  position: relative;
+  top:-2px;
+}

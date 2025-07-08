@@ -11,60 +11,36 @@
             </el-text>
             <el-text tag="h1" class="text-5xl font-bold mb-4 block hero-title font-TobiasTRIAL">
               <span class="fade-in-text" style="animation-delay: 0s;">Automate every </span>
-              <span class="fade-in-text" style="animation-delay: 0.2s;">brand </span>
-              <el-image src="/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
-  height: 94px;vertical-align: middle; animation-delay: 0.3s;" />
-              <span class="fade-in-text" style="animation-delay: 0.4s;"> collab,</span>
+              <span class="fade-in-text ml-20" style="animation-delay: 0.2s;">brand </span>
+              <!-- <el-image src="/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
+  height: 94px;vertical-align: middle; animation-delay: 0.3s;" /> -->
+              <span class="fade-in-text ml-20" style="animation-delay: 0.4s;"> collab,</span>
               <br />
               <span class="fade-in-text" style="animation-delay: 0.6s;">from </span>
-              <span class=" fade-in-text" style="animation-delay: 0.8s;color: #FF6E24;">inbox</span>
-              <el-image src="/images/inbox_img.png" class="fade-in-image" style="display: inline-block; width: 115px;
+              <span class=" fade-in-text ml-20" style="animation-delay: 0.8s;color: #FF6E24;">inbox</span>
+              <el-image src="/images/inbox_img.png" class="fade-in-image ml-20" style="display: inline-block; width: 115px;
   height: 90px;vertical-align: middle; animation-delay: 1s;" />
-              <span class="fade-in-text" style="animation-delay: 1.2s;color: #FF8896;"> to </span>
-              <span class="income-gradient fade-in-text" style="animation-delay: 1.4s;">income</span>
+              <span class="fade-in-text ml-20" style="animation-delay: 1.2s;color: #FF8896;"> to </span>
+              <span class="income-gradient fade-in-text ml-20" style="animation-delay: 1.4s;">income</span>
             </el-text>
-            <div class="mt-8 mb-16 font-TobiasTRIAL">
-              <el-button size="large" class="cta-button bg-black text-white">Start Your 7 Day Free Trial
-                ($19.99)</el-button>
+            <div class="mt-64 font-TobiasTRIAL z-666">
+              <div class="btnBlank text-white">Start Your 7-Day Free Trial</div>
+              <!-- <el-button size="large" class="cta-button bg-black text-white">Start Your 7 Day Free Trial
+                ($19.99)</el-button> -->
             </div>
 
             <!-- Stats Cards -->
-            <el-row :gutter="20" class="mt-16 stats-row" style="margin-top: 20%;">
-              <el-col :xs="24" :md="8"
-                style="background-image: url('/images/2x.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
-                <!-- <el-card class="stat-card stat-card-yellow" shadow="hover">
-                  <div class="monthly-tag">Monthly</div>
-                  <div class="stat-icon handshake-icon"></div>
-                  <el-text tag="h3" class="text-4xl font-bold stat-value">2X</el-text>
-                  <el-text tag="p" class="text-sm stat-label">Deals</el-text>
-                  <el-text tag="p" class="text-xs stat-desc">More brand collab deals. Higher<br />Collab Value.
-                    Greater Stability</el-text>
-                </el-card> -->
-              </el-col>
-
-              <el-col :xs="24" :md="8"
-                style="margin-top: -28%; background-image: url('/images/1.5x.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
-                <!-- <el-card class="stat-card stat-card-white" shadow="hover">
-                  <div class="stat-icon income-icon"></div>
-                  <div class="trend-arrow"></div>
-                  <el-text tag="h3" class="text-4xl font-bold stat-value">1.5X</el-text>
-                  <el-text tag="p" class="text-sm stat-label">Income</el-text>
-                  <el-text tag="p" class="text-xs stat-desc">More income</el-text>
-                </el-card> -->
-              </el-col>
-
-              <el-col :xs="24" :md="8"
-                style="background-image: url('/images/80.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 240px;">
-                <!-- <el-card class="stat-card stat-card-pink" shadow="hover">
-                  <div class="stat-icon time-icon"></div>
-                  <div class="down-arrow"></div>
-                  <el-text tag="h3" class="text-4xl font-bold stat-value">80%</el-text>
-                  <el-text tag="p" class="text-sm stat-label">Time</el-text>
-                  <el-text tag="p" class="text-xs stat-desc">less back-and-forth inbox work</el-text>
-                  <div class="gmail-icon"></div>
-                </el-card> -->
-              </el-col>
-            </el-row>
+            <div class="statsCardsBox">
+                <div class="left">
+                  <img src="/images/2x.png" alt="">
+                </div>
+                <div class="center">
+                  <img src="/images/1.5x.png" alt="">
+                </div>
+                <div class="right">
+                  <img src="/images/80.png" alt="">
+                </div>
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -108,20 +84,20 @@
         <el-col :span="24">
           <div class="container">
             <div class="text-center mb-5 font-TobiasTRIAL">
-              <el-text tag="h2" class="section-title">
+              <el-text tag="h2" class="section-title mt-300 mb-48">
                 Inbox complexity is stealing
                 <br />your time and money
               </el-text>
             </div>
-            <el-row :align="24">
-              <el-col :span="16">
-                <el-col :span="24" style="display: flex;">
-                  <el-col :span="12">
-                    <!-- Card 1 - Too many emails -->
+            <!----->
+            <el-row :gutter="20">
+              <el-col :span="17">
+                  <el-row>
+                  <el-col :span="10">
                     <el-card class="complexity-card" shadow="hover"
-                      style="display: flex; flex-direction: column; height: 460px; width: 384px; position: relative; overflow: hidden;">
+                      style="display: flex; flex-direction: column; height: 491px; width:calc(100% - 20px); position: relative; overflow: hidden;">
                       <div class="card-icon">
-                        <el-image src="/images/notebook.png" style="width: 24px; height: 24px; margin-bottom: 16px;" />
+                        <el-image src="/images/notebook.png" style="width: 20px; height: 20px; margin-bottom: 20px;" />
                         <el-text tag="h3" class="card-title font-TobiasTRIAL">
                           Too many emails. Too<br /> much wasted time.
                         </el-text>
@@ -133,51 +109,47 @@
                         style="width: 100%;height: 100%;position: absolute; bottom: 0; left: 0; right: 0;" />
                     </el-card>
                   </el-col>
-                  <el-col :span="12" style="display: flex; flex-direction: column;">
-                    <!-- Card 2 - Slow reply -->
+                  <el-col :span="14">
                     <el-card class="complexity-card" shadow="hover"
-                      style="height: 195px;width: 384px; position: relative; overflow: hidden;">
+                      style="height: 178px;width: calc(100%); position: relative; overflow: hidden;">
                       <div class="card-icon">
-                        <el-image src="/images/clock.png" style="width: 24px; height: 24px;" />
+                        <el-image src="/images/clock.png" style="width: 20px; height: 20px;" />
                       </div>
                       <el-text tag="h3" class="card-title font-TobiasTRIAL" style="">
                         Every slow reply is <br />a lost chance.
                       </el-text>
                       <el-image src="/images/hours.png"
-                        style="position: absolute; top: 45px; right: 40px;width:100px ;" />
-
+                        style="position: absolute; top: 40px; right: 40px;width:90px ;" />
                     </el-card>
-                    <!-- Card 3 - Hours wasted -->
+                    <!----->
                     <el-card class="complexity-card hours-card" shadow="hover"
-                      style="height: 230px;margin-top: 32px; width: 384px;">
-
+                          style="height: 290px;margin-top: 20px; width:calc(100%);">
                     </el-card>
                   </el-col>
-                </el-col>
-                <el-col :span="24" style="margin-top: 32px;">
-                  <!-- Card 6 - Repetition -->
-                  <el-card class="complexity-card wide-card" shadow="hover"
-                    style="width: 799px;height: 244px; display: flex; flex-direction: column; position: relative; overflow: hidden;">
-                    <div class="card-icon">
-                      <el-image src="/images/pencil.png" style="width: 24px; height: 24px; " />
-                    </div>
-                    <el-text tag="h3" class="card-title font-TobiasTRIAL">
-                      Repetition kills productivity.<br /> Automation restores it.
-                    </el-text>
-                    <el-text tag="p" class="card-description">
-                      Brand deals involve endless repeats—addresses, quotes, media<br />
-                      kits. Coolla handles it all in one click.
-                    </el-text>
-                    <el-image src="/images/Address.png"
-                      style="position: absolute; right: 80px; top: 55%; transform: translateY(-50%); width: 168px; height: 115px;" />
-                  </el-card>
-                </el-col>
+                  <el-col :span="24">
+                    <el-card class="complexity-card wide-card" shadow="hover"
+                      style="width: 100%;height: 244px; display: flex; flex-direction: column; position: relative; overflow: hidden; margin-top:20px;">
+                      <div class="card-icon">
+                        <el-image src="/images/pencil.png" style="width: 24px; height: 24px; " />
+                      </div>
+                      <el-text tag="h3" class="card-title font-TobiasTRIAL">
+                        Repetition kills productivity.<br /> Automation restores it.
+                      </el-text>
+                      <el-text tag="p" class="card-description">
+                        Brand deals involve endless repeats—addresses, quotes, media<br />
+                        kits. Coolla handles it all in one click.
+                      </el-text>
+                      <el-image src="/images/Address.png"
+                        style="position: absolute; right: 80px; top: 55%; transform: translateY(-50%); width: 168px; height: 115px;" />
+                    </el-card>
+                  </el-col>
+                </el-row>
               </el-col>
-              <el-col :span="8" style="display: flex;flex-direction: column;">
+              <el-col :span="7">
                 <el-card class="complexity-card" shadow="hover"
-                  style="height: 356px; width: 384px;position: relative; overflow: hidden;">
+                  style="height: 356px; width:100%;position: relative; overflow: hidden;">
                   <div class="card-icon">
-                    <el-image src="/images/warning.png" style="width: 24px; height: 24px;" />
+                    <el-image src="/images/warning.png" style="width: 20px; height: 20%;" />
                   </div>
                   <el-text tag="h3" class="card-title font-TobiasTRIAL">
                     Struggle to negotiate?
@@ -185,11 +157,10 @@
                   </el-text>
                   <el-image src="/images/lowPrice.png"
                     style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);" />
-
                 </el-card>
-                <!-- Card 5 - Contracts -->
+                <!----->
                 <el-card class="complexity-card" shadow="hover"
-                  style="margin-top: 32px;width: 384px;height: 349px;background-color: #F9F9F9;border-radius: 24px;padding: 40px;position: relative;overflow: hidden;">
+                  style="margin-top: 20px;width:100%;height: 380px;background-color: #F9F9F9;border-radius: 24px;padding: 40px;position: relative;overflow: hidden;">
                   <div class="card-icon">
                     <el-image src="/images/document.png" style="width: 20px;height: 20px;" />
                   </div>
@@ -217,7 +188,7 @@
         <el-col :span="24">
           <div class="container">
             <div class="text-center mb-5 font-TobiasTRIAL">
-              <el-text tag="h2" class="section-title">
+              <el-text tag="h2" class="section-title mt-207 mb-48">
                 Nia, The Smart Email Closer
                 <br />Work Less, Earn More
               </el-text>
@@ -254,15 +225,16 @@
             <el-image src="/images/smart6.png" class="meet-nia-full-image"></el-image>
 
           </div>
-          <el-text tag="p" class="text-center mb-5 font-TobiasTRIAL gradient-text-3color ">
-            <el-image src="/images/miniNia.png" class="niasmall" />
-            Stay tuned for more…
-          </el-text>
+          <div class="text-center mb-5  " style="width:100%; display: flex; justify-content: center; margin-top:40px; margin-bottom:71px">
+            <!-- <el-image src="" class="niasmall"/> -->
+             <img src="/images/miniNia.png" alt="" style="width:58px; position: relative;top:5px;">
+             <div class="gradient-text-3color font-TobiasTRIAL" style="font-size:32px;">Stay tuned for more…</div>
+          </div>
         </el-col>
       </el-row>
 
       <!-- Control Section -->
-      <el-row class="py-16 control-section">
+      <el-row class="">
         <el-col :span="24">
 
           <el-image src="/images/controlEverything.png" class="full-width-image" fit="cover"></el-image>
@@ -374,61 +346,140 @@
             <div class="faq-container">
               <div class="faq-item" :class="{ active: activeFaqItem === 0 }">
                 <div class="faq-question" @click="toggleFaq(0)">
-                  <span>What is Colla! uesd for?</span>
+                  <span>What is Coolla?</span>
                   <el-icon class="faq-icon">
                     <Plus v-if="activeFaqItem !== 0" />
                     <Close v-else />
                   </el-icon>
                 </div>
                 <div class="faq-answer" v-if="activeFaqItem === 0">
-                  <p>Colla is an AI-powered tool that helps creators and brands manage collaboration opportunities. It
-                    organizes your inbox, automates responses, and helps you negotiate better deals.</p>
+                  <p>Coolla is an AI business collab agent designed specifically for influencers and creators. The Smart Email Closer. It automates your email reply, quoting, sample&contract management, and income tracking, enabling you to manage brand collaborations more efficiently and increase your earnings effortlessly.</p>
                 </div>
               </div>
 
               <div class="faq-item" :class="{ active: activeFaqItem === 1 }">
                 <div class="faq-question" @click="toggleFaq(1)">
-                  <span>How many team members can I invite to my account?</span>
+                  <span>Is my data secure when using Coolla?</span>
                   <el-icon class="faq-icon">
                     <Plus v-if="activeFaqItem !== 1" />
                     <Close v-else />
                   </el-icon>
                 </div>
                 <div class="faq-answer" v-if="activeFaqItem === 1">
-                  <p>You may use any tool as long as you submit your work as a PDF file. The brief provides more details
-                    on the exact format required.You may use any tool as long as you submit your work as a PDF file. The
-                    brief provides more details on the exact format required.</p>
+                  <p>We take data security seriously. Coolla protects creators’ inboxes, social media account and brand deal information with the highest standards of compliance and control. Coolla employs industry-standard encryption to protect your personal information and collaboration data, and does not share your data with third parties without authorization.</p>
+                  <p class="mt-15">Here’s how we keep your data safe:</p>
+                  <div class="mt-15 faqDiv">
+                    <ul>
+                      <li>End-to-end encryption for all inbox interactions</li>
+                      <li>Only accesses emails relevant to brand deals, with user permission</li>
+                      <li>Fully compliant with global data regulations like GDPR and CCPA</li>
+                      <li>No third-party data sharing — your data stays yours</li>
+                      <li>AI features like auto-reply, smart quoting, and contract review run securely in a sandboxed environment</li>
+                    </ul>
+                  </div>
+                  <p class="mt-15">
+                    Coolla empowers creators to automate their brand collaborations without compromising on privacy, transparency, or control.
+                  </p>
+                  <p class="mt-15">🔒 Your inbox is private. Your data is protected. Your deals are secure — with Coolla.</p>
                 </div>
               </div>
 
               <div class="faq-item" :class="{ active: activeFaqItem === 2 }">
                 <div class="faq-question" @click="toggleFaq(2)">
-                  <span>How does Kin's memory work?</span>
+                  <span>How does the “Smart Quote engine”work?</span>
                   <el-icon class="faq-icon">
                     <Plus v-if="activeFaqItem !== 2" />
                     <Close v-else />
                   </el-icon>
                 </div>
                 <div class="faq-answer" v-if="activeFaqItem === 2">
-                  <p>Our AI assistant, Nia, learns from your communication style and preferences to help manage your
-                    inbox, draft responses, and negotiate deals on your behalf.</p>
+                  <p><b>1. Personalized Pricing Inputs</b></p>
+                  <p>Creators set their preferred pricing ranges for different content types (e.g. posts, videos, livestreams), along with minimum acceptable rates.</p>
+                  <p class="mt-15">
+                    <b>2. Platform-Wide Deal Data</b>
+                  </p>
+                  <p>Coolla pulls from a large dataset of real deal activity, including:</p>
+                  <div class="faqDiv">
+                    <ul>
+                      <li>Your latest social media performance</li>
+                      <li>Historical pricing from similar creators</li>
+                      <li>Specific brand past offers</li>
+                      <li>Current market benchmarks by industry, region, country and customized format</li>
+                    </ul>
+                  </div>
+                  <p class="mt-15">
+                    <b>3. Dynamic Optimization</b>
+                  </p>
+                  <p>The system continuously learns from your past deal outcomes. If certain deal types consistently convert at higher rates or values, Nia will automatically adjust future quotes to reflect that.</p>
+                  <p class="mt-15">
+                    4. Creator Control
+                  </p>
+                  <p>Every suggested quote is editable before being sent. You remain in full control — Coolla simply helps you start from the smartest price point.</p>
+                  <p class="mt-15">
+                    ✅ The Results
+                  </p>
+                  <div class="faqDiv">
+                    <ul>
+                      <li>Up to 100% higher deal success rate</li>
+                      <li>50% increase in average quote value</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div class="faq-item" :class="{ active: activeFaqItem === 3 }">
                 <div class="faq-question" @click="toggleFaq(3)">
-                  <span>What tools can I use, and in what format should I submit my work?</span>
+                  <span>Who is Coolla suitable for?</span>
                   <el-icon class="faq-icon">
                     <Plus v-if="activeFaqItem !== 3" />
                     <Close v-else />
                   </el-icon>
                 </div>
                 <div class="faq-answer" v-if="activeFaqItem === 3">
-                  <p>The free tier gives you access to basic inbox management features, including email categorization
-                    and simple response templates. For more advanced features, consider upgrading to our premium plans.
+                  <p>Coolla is designed for influencers at all levels, from newcomers to top-tier creators with large followings. It customizes solutions based on your needs to help maximize your revenue.
                   </p>
                 </div>
               </div>
+
+              <div class="faq-item" :class="{ active: activeFaqItem === 4 }">
+                <div class="faq-question" @click="toggleFaq(4)">
+                  <span>Does Coolla support managing collaborations across multiple platforms?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 4" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 4">
+                  <p>Yes, Coolla integrates collaboration information from various platforms, including Tiktok, Youtube, Instagram. consolidating communication emails, quotes, and contracts in one place to reduce administrative work and improve efficiency.</p>
+                </div>
+              </div>
+
+              <div class="faq-item" :class="{ active: activeFaqItem === 5 }">
+                <div class="faq-question" @click="toggleFaq(5)">
+                  <span>How do I get started with Coolla?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 5" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 5">
+                  <p>Simply visit https://coolla.io to register an account with your work email. Then complete a brief profile setup, including social media connection and personal quote input, to immediately start using core features such as smart reply&quote and contract management.</p>
+                </div>
+              </div>
+
+              <div class="faq-item" :class="{ active: activeFaqItem === 6 }">
+                <div class="faq-question" @click="toggleFaq(6)">
+                  <span>Does Coolla offer a free trial or subscription plans?</span>
+                  <el-icon class="faq-icon">
+                    <Plus v-if="activeFaqItem !== 6" />
+                    <Close v-else />
+                  </el-icon>
+                </div>
+                <div class="faq-answer" v-if="activeFaqItem === 6">
+                  <p>Coolla currently provides a 7-days free trial for basic features, while advanced features and custom services are available through flexible subscription plans including monthly&yearly subscription. Please refer to our Pricing page or contact customer support for more details.</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </el-col>
@@ -787,21 +838,21 @@ export default {
   line-height: 1.4;
   color: #1A130E;
   font-size: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .hero-container {
   position: relative;
-  background-image: url('/images/hero_bg.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 40px 20px;
+  background: url('/images/hero_bg.png') center center no-repeat;
+  /* background-size: cover; */
+  background-size:100% auto;
+  padding: 60px 20px 0 20px;
   z-index: 1;
+  margin-bottom:140px;
 }
 
 .subtitle {
-  font-size: 32px;
+  font-size: 26px;
   color: #1A130E 80%;
   display: inline-flex;
   align-items: center;
@@ -813,12 +864,18 @@ export default {
   width: 37px;
   height: 37px;
   margin-right: 0.5rem;
+  position:relative;
+  top:5px;
 }
 
 .fade-in-text {
   display: inline-block;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.ml-20{
+  margin-left:20px;
 }
 
 .fade-in-image {
@@ -1154,10 +1211,10 @@ export default {
 .no-manager-title {
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.6;
   color: #000;
   font-family: 'Tobias TRIAL', Times, serif;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .no-manager-desc {
@@ -1166,7 +1223,6 @@ export default {
   color: #1A130E;
   position: relative;
   z-index: 3;
-  margin-top: 10px;
 }
 
 .nia-icon {
@@ -1526,8 +1582,7 @@ export default {
   transition: all 0.3s ease;
   position: relative;
   font-size: 24px;
-  margin-right: 32px;
-  padding: 40px;
+  padding: 32px;
 }
 
 .complexity-card :deep(.el-card__body) {
@@ -1938,5 +1993,33 @@ export default {
   font-size: 16px;
   font-weight: 400;
   color: #1A130E;
+}
+
+.statsCardsBox{
+  width:100%;
+  display: flex;
+  margin-top:72px;
+}
+
+.statsCardsBox .left{
+  width:33%;
+}
+.statsCardsBox .left img{
+  width:100%;
+  margin-top:220px;
+}
+.statsCardsBox .center{
+  width:33%;
+}
+.statsCardsBox .center img{
+  width:100%;
+}
+.statsCardsBox .right{
+  width:33%;
+}
+.statsCardsBox .right img{
+  width:95%;
+  margin-top:220px;
+  margin-left:24px;
 }
 </style>

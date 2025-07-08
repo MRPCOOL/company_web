@@ -4,7 +4,7 @@
       <div class="header-layout">
         <!-- Logo (Left) -->
         <div class="logo-container">
-          <router-link to="/" class="logo-link">
+          <router-link to="/home" class="logo-link">
             <el-image src="/images/colla_logo.png" alt="Colla" class="logo-image"></el-image>
           </router-link>
         </div>
@@ -13,11 +13,11 @@
         <div class="nav-container">
           <el-menu mode="horizontal" :ellipsis="false" class="nav-menu">
             <el-menu-item index="home">
-              <router-link to="/">Home</router-link>
+              <router-link to="/index">Home</router-link>
             </el-menu-item>
-            <el-menu-item index="about">
+            <!-- <el-menu-item index="about">
               <router-link to="/about">About</router-link>
-            </el-menu-item>
+            </el-menu-item> -->
             <el-menu-item index="price">
               <router-link to="/price">Price</router-link>
             </el-menu-item>
@@ -49,11 +49,11 @@
         <div class="container">
           <el-menu mode="vertical" class="mobile-nav-menu">
             <el-menu-item index="home" @click="isMobileMenuOpen = false">
-              <router-link to="/">Home</router-link>
+              <router-link to="/index">Home</router-link>
             </el-menu-item>
-            <el-menu-item index="about" @click="isMobileMenuOpen = false">
+            <!-- <el-menu-item index="about" @click="isMobileMenuOpen = false">
               <router-link to="/about">About</router-link>
-            </el-menu-item>
+            </el-menu-item> -->
             <el-menu-item index="price" @click="isMobileMenuOpen = false">
               <router-link to="/price">Price</router-link>
             </el-menu-item>
@@ -138,6 +138,8 @@ const isMobileMenuOpen = ref(false);
 }
 
 .get-started-btn {
+  height:40px;
+  padding:0 20px;
   background: linear-gradient(120deg, #fe815f 0%, #febe5f 100%);
   border: none;
   display: none;
@@ -210,9 +212,9 @@ const isMobileMenuOpen = ref(false);
   height: auto;
   line-height: normal;
   padding: 0 20px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1A130E;
 }
 
 :deep(.el-menu--horizontal > .el-menu-item.is-active) {
