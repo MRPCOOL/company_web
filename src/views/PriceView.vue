@@ -3,7 +3,7 @@
   <div class="subscription-container">
     <div class="topTitle" >
         <span class="fade-in-text" style="animation-delay: 0s;">Simple </span>
-        <span class="fade-in-text ml-20 caiseT" style="animation-delay: 0.2s;">Pricing </span>
+        <span class="fade-in-text ml-15 caiseT" style="animation-delay: 0.2s;">Pricing </span>
     </div>
     <el-row :gutter="20">
       <!-- Free Plan Card -->
