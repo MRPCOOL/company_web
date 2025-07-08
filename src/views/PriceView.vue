@@ -6,6 +6,7 @@
         <span class="fade-in-text ml-15 caiseT" style="animation-delay: 0.2s;">Pricing </span>
     </div>
     <el-row :gutter="20">
+      <el-tag class="save-badge save-badge-container" type="success" effect="plain">👍 Save 50%</el-tag>
       <!-- Free Plan Card -->
       <el-col :xs="24" :sm="24" :md="8">
         <el-card class="subscription-card free-card" shadow="hover">
@@ -111,7 +112,7 @@
       <!-- Yearly Plan Card -->
       <el-col :xs="24" :sm="24" :md="8">
         <el-card class="subscription-card" shadow="hover">
-          <el-tag class="save-badge" type="success" effect="plain">👍 Save 50%</el-tag>
+          
           <div class="plan-name">Yearly</div>
           <div class="price-container">
             <span class="price">$9.9</span>
@@ -265,11 +266,26 @@ const showSubscriptionPopup = () => {
 }
 
 .save-badge {
+  width:194px;
+  height:42px;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
+  top: 5px;
+  right: -3px;
+  font-size: 24px;
   background-color: #47CD8933;
+  font-size:24px;
+  border-radius: 30px;
+  z-index: 666;
+}
+
+/* 包含文字倾斜的修正方案 */
+.save-badge-container {
+  transform: rotate(15deg);
+  transform-origin: center; /* 旋转中心点 */
+}
+
+.el-tag__content{
+  transform: rotate(2deg); /* 反向旋转子元素保持内容可读 */
 }
 
 .features {
