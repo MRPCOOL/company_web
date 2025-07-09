@@ -246,8 +246,8 @@
       <el-row class="py-16 testimonials-section">
         <el-col :span="24">
           <div class="testimonials-container">
-            <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL"
-              style="color: black;font-size: 50px">
+            <el-text tag="h2" class="text-3xl font-bold text-center mb-4rem block font-TobiasTRIAL"
+              style="color: black;font-size: 50px;">
               <!-- What Do KOLs <img src="/images/img.png" alt="KOL"
                 style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say? -->
                 Trusted by <span class="yellowBg">8000+</span> Influencers worldwide
@@ -1770,6 +1770,9 @@ export default {
   flex-direction: column;
   gap: 24px;
 }
+.mb-4rem{
+  margin-bottom:4.5rem;
+}
 
 .testimonial-carousel-2row {
   width: 100%;
@@ -1866,6 +1869,7 @@ export default {
 .testimonials-container {
   width: 100%;
   padding: 0 20px;
+  margin-top:100px;
 }
 
 .testimonial-carousel-2row-wrapper {
