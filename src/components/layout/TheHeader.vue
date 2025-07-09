@@ -13,7 +13,7 @@
         <div class="nav-container">
           <el-menu mode="horizontal" :ellipsis="false" class="nav-menu">
             <el-menu-item index="home">
-              <router-link to="/index">Home</router-link>
+              <router-link to="/">Home</router-link>
             </el-menu-item>
             <!-- <el-menu-item index="about">
               <router-link to="/about">About</router-link>
@@ -49,7 +49,7 @@
         <div class="container">
           <el-menu mode="vertical" class="mobile-nav-menu">
             <el-menu-item index="home" @click="isMobileMenuOpen = false">
-              <router-link to="/index">Home</router-link>
+              <router-link to="/">Home</router-link>
             </el-menu-item>
             <!-- <el-menu-item index="about" @click="isMobileMenuOpen = false">
               <router-link to="/about">About</router-link>
