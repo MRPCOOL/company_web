@@ -31,15 +31,15 @@
 
             <!-- Stats Cards -->
             <div class="statsCardsBox">
+                <div class="centerBox">
+                  <img src="/images/1.5x.png" alt="">
+                </div>
                 <div class="left">
                   <img src="/images/2x.png" alt="">
                 </div>
-                <div class="center">
-                  <img src="/images/1.5x.png" alt="">
-                </div>
                 <div class="right">
                   <img src="/images/80.png" alt="">
-                </div>
+                </div> 
             </div>
           </div>
         </el-col>
@@ -248,8 +248,9 @@
           <div class="testimonials-container">
             <el-text tag="h2" class="text-3xl font-bold text-center mb-12 block font-TobiasTRIAL"
               style="color: black;font-size: 50px">
-              What Do KOLs <img src="/images/img.png" alt="KOL"
-                style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say?
+              <!-- What Do KOLs <img src="/images/img.png" alt="KOL"
+                style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say? -->
+                Trusted by <span class="yellowBg">8000+</span> Influencers worldwide
             </el-text>
             <div class="testimonial-carousel-2row-wrapper">
               <!-- 第一行：从右往左滚动 -->
@@ -1073,6 +1074,10 @@ export default {
   border-bottom: none;
 }
 
+:deep(.el-menu--horizontal > .active) {
+  color:#fe815f;
+}
+
 :deep(.el-menu-item) {
   font-size: 16px;
   color: var(--text-color);
@@ -1083,7 +1088,7 @@ export default {
 }
 
 :deep(.el-menu-item.is-active) {
-  color: var(--primary-color);
+  color: #fe815f !important;
 }
 
 :deep(.el-collapse-item__header) {
@@ -1211,10 +1216,11 @@ export default {
 .no-manager-title {
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.4;
   color: #000;
   font-family: 'Tobias TRIAL', Times, serif;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-top:30px;
 }
 
 .no-manager-desc {
@@ -1227,7 +1233,7 @@ export default {
 
 .nia-icon {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   right: -14px;
   width: 96px;
   height: 110px;
@@ -1236,7 +1242,7 @@ export default {
 
 .hello-bubble {
   position: absolute;
-  bottom: 130px;
+  bottom: 110px;
   right: 45px;
   background-color: #FE815F;
   color: white;
@@ -1281,8 +1287,8 @@ export default {
 
 .meet-nia-bubble {
   position: absolute;
-  top: 10px;
-  right: -20px;
+  top: 25px;
+  right: -70px;
   background-color: #000;
   color: white;
   padding: 3px 13px;
@@ -1793,7 +1799,7 @@ export default {
   transition: box-shadow 0.2s, border-color 0.2s;
   padding: 24px 20px;
   overflow: hidden;
-  height: 280px;
+  height: 251px;
   display: flex;
   flex-direction: column;
 }
@@ -1821,8 +1827,8 @@ export default {
 
 .testimonial-card-custom2 .flex.items-center.justify-between.mt-4 {
   margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid #e5e7eb;
+  /* padding-top: 16px; */
+  /* border-top: 1px solid #e5e7eb; */
 }
 
 .brand-stack {
@@ -1898,7 +1904,7 @@ export default {
   transition: box-shadow 0.2s, border-color 0.2s;
   padding: 24px 20px;
   overflow: hidden;
-  height: 280px;
+  height: 251px;
   display: flex;
   flex-direction: column;
 }
@@ -1996,30 +2002,44 @@ export default {
 }
 
 .statsCardsBox{
+  width:90%;
+  height:582px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin:72px auto 0 auto;
+}
+
+.statsCardsBox .centerBox{
   width:100%;
   display: flex;
-  margin-top:72px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:-15%;
+  z-index:1
 }
+
 
 .statsCardsBox .left{
   width:33%;
+  z-index:2
 }
 .statsCardsBox .left img{
-  width:100%;
-  margin-top:220px;
-}
-.statsCardsBox .center{
-  width:33%;
-}
-.statsCardsBox .center img{
-  width:100%;
+  width:90%;
+  margin:220px 0 0 20%;
 }
 .statsCardsBox .right{
   width:33%;
+  z-index:3;
 }
 .statsCardsBox .right img{
-  width:95%;
-  margin-top:220px;
-  margin-left:24px;
+  width:80%;
+  margin:230px 0 0 0;
+}
+.yellowBg{
+  background: rgb(255, 244,179);
+  border-radius: 10px;
+  padding:0 10px;
 }
 </style>

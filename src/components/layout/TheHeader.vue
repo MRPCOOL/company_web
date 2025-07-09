@@ -12,13 +12,13 @@
         <!-- Navigation Menu (Center) -->
         <div class="nav-container">
           <el-menu mode="horizontal" :ellipsis="false" class="nav-menu">
-            <el-menu-item index="home">
+            <el-menu-item index="home" :class="{'is-active': $route.href == '/'}">
               <router-link to="/">Home</router-link>
             </el-menu-item>
             <!-- <el-menu-item index="about">
               <router-link to="/about">About</router-link>
             </el-menu-item> -->
-            <el-menu-item index="price">
+            <el-menu-item index="price" :class="{'is-active': $route.href == '/price'}">
               <router-link to="/price">Price</router-link>
             </el-menu-item>
           </el-menu>
@@ -203,7 +203,7 @@ const isMobileMenuOpen = ref(false);
 
 /* Element Plus Menu Overrides */
 :deep(.el-menu--horizontal) {
-  height: 60px;
+  height: 54px;
   display: flex;
   align-items: center;
 }
@@ -218,12 +218,15 @@ const isMobileMenuOpen = ref(false);
 }
 
 :deep(.el-menu--horizontal > .el-menu-item.is-active) {
-  color: #f97316;
+  color: #fe815f !important;
+  background:none !important;
   border-bottom: none;
 }
 
 :deep(.el-menu--horizontal > .el-menu-item:hover) {
-  color: #f97316;
+  color:#fe815f ;
+  background:none !important;
+  border-bottom: none;
 }
 
 :deep(.el-menu--horizontal > .el-menu-item a) {
