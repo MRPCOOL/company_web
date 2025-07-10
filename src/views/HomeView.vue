@@ -11,8 +11,8 @@
             </el-text>
             <el-text tag="h1" class="text-5xl font-bold mb-4 block hero-title font-TobiasTRIAL">
               <span class="fade-in-text" style="animation-delay: 0s;">Automate every </span>
-              <span class="fade-in-text ml-20" style="animation-delay: 0.2s;">brand </span>
-              <!-- <el-image src="/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
+             <!-- <span class="fade-in-text ml-20" style="animation-delay: 0.2s;">brand </span>
+              <el-image src="/images/brand_img.png" class="fade-in-image" style="display: inline-block;   width: 51px;
   height: 94px;vertical-align: middle; animation-delay: 0.3s;" /> -->
               <span class="fade-in-text ml-20" style="animation-delay: 0.4s;"> collab,</span>
               <br />
@@ -2007,7 +2007,7 @@ export default {
 
 .statsCardsBox{
   width:90%;
-  height:582px;
+  height:500px;
   display: flex;
   position: relative;
   justify-content: space-between;
