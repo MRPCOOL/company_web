@@ -190,7 +190,7 @@
             <div class="text-center mb-5 font-TobiasTRIAL">
               <el-text tag="h2" class="section-title mt-207 mb-48">
                 Nia, The Smart Email Closer
-                <br />Work Less, Earn More
+                <br />Work <span class="lessBg">Less</span>, Earn <span class="moreBg">More</span>
               </el-text>
             </div>
             <!-- Features Grid -->
@@ -247,7 +247,7 @@
         <el-col :span="24">
           <div class="testimonials-container">
             <el-text tag="h2" class="text-3xl font-bold text-center mb-4rem block font-TobiasTRIAL"
-              style="color: black;font-size: 50px;">
+              style="color: black;font-size: 50px; height: 67px; line-height: 67px;">
               <!-- What Do KOLs <img src="/images/img.png" alt="KOL"
                 style="display:inline-block;vertical-align:middle;height:1em;margin:0 4px;" /> Say? -->
                 Trusted by <span class="yellowBg">8000+</span> Influencers worldwide
@@ -1869,7 +1869,7 @@ export default {
 .testimonials-container {
   width: 100%;
   padding: 0 20px;
-  margin-top:100px;
+  margin-top:60px;
 }
 
 .testimonial-carousel-2row-wrapper {
@@ -2042,8 +2042,27 @@ export default {
   margin:230px 0 0 0;
 }
 .yellowBg{
-  background: rgb(255, 244,179);
-  border-radius: 10px;
+  width:176px;
+  height:67px;
+  background:url('/public/images/y8000.png') center center no-repeat;
+  background-size: auto 100%;
+  position: relative;
   padding:0 10px;
+}
+
+.lessBg{
+  width:125px;
+  height:67px;
+  padding:0 10px;
+  background:url('/public/images/less.png') center center no-repeat;
+  background-size: auto 100%;
+}
+
+.moreBg{
+  width:147px;
+  height:75px;
+  padding:0 10px;
+  background:url('/public/images/more.png') center center no-repeat;
+  background-size: auto 100%;
 }
 </style>
