@@ -77,7 +77,7 @@ const isMobileMenuOpen = ref(false);
 
 //跳转登录
 function goLogin(){
-  window.open('https://wwww.coolla.online/login')
+  window.open('https://www.coolla.online/login')
 }
 
 </script>
