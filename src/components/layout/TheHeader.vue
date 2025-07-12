@@ -26,7 +26,7 @@
 
         <!-- Get Started Button (Right) -->
         <div class="action-container">
-          <el-button type="primary" class="get-started-btn" disabled>
+          <el-button type="primary" class="get-started-btn" @click="goLogin()">
             Get Started
           </el-button>
 
@@ -74,6 +74,12 @@ import { ref } from 'vue';
 import { Menu, Close } from '@element-plus/icons-vue';
 
 const isMobileMenuOpen = ref(false);
+
+//跳转登录
+function goLogin(){
+  window.open('https://wwww.coolla.online/login')
+}
+
 </script>
 
 <style scoped>
