@@ -40,7 +40,7 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/HomeView.vue'),
+    component: () => import('../views/about/index.vue'),
     meta: { 
       title: 'About - Colla', 
       description: 'Learn more about Colla and our mission.' 

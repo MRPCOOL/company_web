@@ -15,9 +15,9 @@
             <el-menu-item index="home" :class="{'is-active': $route.href == '/'}">
               <router-link to="/">Home</router-link>
             </el-menu-item>
-            <!-- <el-menu-item index="about">
+            <el-menu-item index="about" :class="{'is-active': $route.href == '/about'}">
               <router-link to="/about">About</router-link>
-            </el-menu-item> -->
+            </el-menu-item>
             <el-menu-item index="price" :class="{'is-active': $route.href == '/price'}">
               <router-link to="/price">Price</router-link>
             </el-menu-item>
@@ -51,9 +51,9 @@
             <el-menu-item index="home" @click="isMobileMenuOpen = false">
               <router-link to="/">Home</router-link>
             </el-menu-item>
-            <!-- <el-menu-item index="about" @click="isMobileMenuOpen = false">
+            <el-menu-item index="about" @click="isMobileMenuOpen = false">
               <router-link to="/about">About</router-link>
-            </el-menu-item> -->
+            </el-menu-item>
             <el-menu-item index="price" @click="isMobileMenuOpen = false">
               <router-link to="/price">Price</router-link>
             </el-menu-item>
@@ -77,7 +77,7 @@ const isMobileMenuOpen = ref(false);
 
 //跳转登录
 function goLogin(){
-  window.open('https://www.coolla.online/login')
+  window.open('https://login.coolla.online/login')
 }
 
 </script>
