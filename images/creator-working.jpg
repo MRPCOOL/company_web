@@ -1,0 +1,21 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F5D0C5" />
+  
+  <!-- Person silhouette -->
+  <path d="M200 80C216.569 80 230 66.5685 230 50C230 33.4315 216.569 20 200 20C183.431 20 170 33.4315 170 50C170 66.5685 183.431 80 200 80Z" fill="#BD8C7D" />
+  <path d="M150 280C150 230 170 180 200 180C230 180 250 230 250 280" fill="#BD8C7D" />
+  
+  <!-- Laptop -->
+  <rect x="160" y="150" width="80" height="60" rx="5" fill="#555555" />
+  <rect x="165" y="155" width="70" height="45" rx="2" fill="#333333" />
+  <rect x="140" y="210" width="120" height="10" rx="5" fill="#555555" />
+  
+  <!-- Desk -->
+  <rect x="100" y="220" width="200" height="20" rx="2" fill="#8B5E3C" />
+  
+  <!-- Coffee cup -->
+  <rect x="280" y="180" width="20" height="30" rx="5" fill="#7B3F00" />
+  <path d="M280 185C280 182.239 282.239 180 285 180H295C297.761 180 300 182.239 300 185V185C300 187.761 297.761 190 295 190H285C282.239 190 280 187.761 280 185V185Z" fill="#7B3F00" />
+  <path d="M285 180C285 175 290 170 290 170" stroke="#7B3F00" stroke-width="2" />
+</svg> 
