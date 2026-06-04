@@ -91,9 +91,9 @@
             </div>
             <!----->
             <el-row :gutter="20">
-              <el-col :span="17" :xs="24" :sm="24" :md="17">
+              <el-col :span="17">
                 <el-row>
-                  <el-col :span="10" :xs="24" :sm="24" :md="10">
+                  <el-col :span="10">
                     <el-card class="complexity-card" shadow="hover"
                       style="display: flex; flex-direction: column; height: 491px; width:calc(100% - 20px); position: relative; overflow: hidden;">
                       <div class="card-icon">
@@ -106,11 +106,11 @@
                           每天有繁多的信息涌入您的项目群，<br /> 没有专业的技术对接，交流仿佛对牛弹琴。
                         </el-text>
                       </div>
-                      <el-image :src="toAsset('images/emails.png')" class="card-art card-art-emails"
+                      <el-image :src="toAsset('images/emails.png')"
                         style="width: 100%;height: 100%;position: absolute; bottom: 0; left: 0; right: 0;" />
                     </el-card>
                   </el-col>
-                  <el-col :span="14" :xs="24" :sm="24" :md="14">
+                  <el-col :span="14">
                     <el-card class="complexity-card" shadow="hover"
                       style="height: 178px;width: calc(100%); position: relative; overflow: hidden;">
                       <div class="card-icon">
@@ -119,7 +119,7 @@
                       <el-text tag="h3" class="card-title font-TobiasTRIAL" style="">
                         每一次咨询的问题 <br />都是焦急的等待
                       </el-text>
-                      <el-image :src="toAsset('images/hours.png')" class="card-art card-art-hours"
+                      <el-image :src="toAsset('images/hours.png')"
                         style="position: absolute; top: 40px; right: 40px;width:90px ;" />
                     </el-card>
                     <!----->
@@ -140,13 +140,13 @@
                         慧点科技具备小程序、APP、网站等<br />
                         全栈开发专业技术团队
                       </el-text>
-                      <el-image :src="toAsset('images/Address.png')" class="card-art"
+                      <el-image :src="toAsset('images/Address.png')"
                         style="position: absolute; right: 80px; top: 55%; transform: translateY(-50%); width: 168px; height: 115px;" />
                     </el-card>
                   </el-col>
                 </el-row>
               </el-col>
-              <el-col :span="7" :xs="24" :sm="24" :md="7">
+              <el-col :span="7">
                 <el-card class="complexity-card" shadow="hover"
                   style="height: 356px; width:100%;position: relative; overflow: hidden;">
                   <div class="card-icon">
@@ -159,7 +159,7 @@
                   <el-text tag="p" class="card-description">
                     慧点科技大学生创业团队打破常规
                   </el-text>
-                  <el-image :src="toAsset('images/lowPrice.png')" class="card-art"
+                  <el-image :src="toAsset('images/lowPrice.png')"
                     style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);" />
                 </el-card>
                 <!----->
@@ -178,7 +178,7 @@
                     发票可以抵税<br />
                     安全靠谱选慧点
                   </el-text>
-                  <el-image :src="toAsset('images/contract.png')" class="card-art"
+                  <el-image :src="toAsset('images/contract.png')"
                     style="position: absolute; right: 40px; bottom: 20px;width: 153px; height: 250px;" />
                 </el-card>
               </el-col>
@@ -198,8 +198,8 @@
               </el-text>
             </div>
             <!-- Features Grid -->
-            <div ref="smartlottieContainer" class="meet-nia-full-image1 smart-email-panel">
-              <div class="smart-email-container smart-email-copy">
+            <div ref="smartlottieContainer" class="meet-nia-full-image1">
+              <div class="smart-email-container">
                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
                   From Inbox Chaos To <br /> Clear Deal Flow
                 </el-text>
@@ -210,8 +210,8 @@
                 </el-text>
               </div>
             </div>
-            <div ref="smartlottieContainer2" class="meet-nia-full-image2 smart-email-panel">
-              <div class="smart-email-container2 smart-email-copy">
+            <div ref="smartlottieContainer2" class="meet-nia-full-image2">
+              <div class="smart-email-container2">
                 <el-text class="card-title font-TobiasTRIAL" style="font-size: 32px;font-weight: 600;">
                   Personal Smart Reply. <br /> Professional smart Reply.
                 </el-text>
@@ -224,9 +224,9 @@
               </div>
 
             </div>
-            <el-image :src="toAsset('images/smart3.png')" class="meet-nia-full-image smart-showcase-card"></el-image>
-            <el-image :src="toAsset('images/smart4.png')" class="meet-nia-full-image smart-showcase-card"></el-image>
-            <el-image :src="toAsset('images/smart6.png')" class="meet-nia-full-image smart-showcase-card"></el-image>
+            <el-image :src="toAsset('images/smart3.png')" class="meet-nia-full-image"></el-image>
+            <el-image :src="toAsset('images/smart4.png')" class="meet-nia-full-image"></el-image>
+            <el-image :src="toAsset('images/smart6.png')" class="meet-nia-full-image"></el-image>
 
           </div>
           <div class="text-center mb-5"
@@ -1321,59 +1321,36 @@ export default {
   width: 100%;
   display: block;
   background-color: transparent;
-  margin-top: -120px;
+  margin-top: -184px;
 }
 
 .meet-nia-full-image2 {
   width: 100%;
   display: block;
   background-color: transparent;
-  margin-top: -126px;
+  margin-top: -189px;
 }
 
 .meet-nia-full-image1,
 .meet-nia-full-image2 {
   position: relative;
-  min-height: 500px;
-}
-
-.smart-email-panel {
-  position: relative;
-  overflow: visible;
-  border-radius: 20px;
-  margin: 16px 0;
-}
-
-.smart-email-panel :deep(svg),
-.smart-email-panel :deep(canvas) {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.smart-email-copy {
-  position: relative;
-  z-index: 2;
 }
 
 .smart-email-container2 {
   position: relative;
-  top: 260px;
+  top: 360px;
   left: 10%;
   z-index: 2;
-  max-width: 44%;
+  max-width: 90%;
   width: 100%;
 }
 
 .smart-email-container {
   position: relative;
-  top: 248px;
+  top: 340px;
   left: 10%;
   z-index: 2;
-  max-width: 44%;
+  max-width: 90%;
   width: 100%;
 }
 
@@ -1591,24 +1568,10 @@ export default {
   position: relative;
   font-size: 24px;
   padding: 32px;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 .complexity-card :deep(.el-card__body) {
   height: 100%;
-  position: relative;
-}
-
-.complexity-card > :not(.card-art) {
-  position: relative;
-  z-index: 2;
-}
-
-.card-art {
-  z-index: 1;
-  opacity: 0.88;
-  pointer-events: none;
 }
 
 .complexity-card:hover {
@@ -2020,7 +1983,6 @@ export default {
   font-size: 16px;
   font-weight: 400;
   color: #1A130E;
-  line-height: 1.6;
 }
 
 .statsCardsBox {
@@ -2086,421 +2048,5 @@ export default {
   padding: 0 10px;
   background: url('../../public/images/more.png') center center no-repeat;
   background-size: auto 100%;
-}
-
-@media (max-width: 768px) {
-  .home .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .hero-container {
-    background-size: cover;
-    background-position: center top;
-    padding: 10px 16px 12px;
-    margin-bottom: 0;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 6px 10px;
-    margin-bottom: 8px;
-  }
-
-  .subtitle .el-image {
-    width: 24px;
-    height: 24px;
-    top: 0;
-  }
-
-  .hero-title {
-    font-size: 33px;
-    line-height: 1.1;
-    margin-bottom: 10px;
-  }
-
-  .hero-title .fade-in-text {
-    font-size: 1.68rem !important;
-    line-height: 1.1;
-  }
-
-  .hero-title .fade-in-image {
-    width: 56px !important;
-    height: 44px !important;
-  }
-
-  .ml-20 {
-    margin-left: 8px;
-  }
-
-  .mt-64 {
-    margin-top: 10px !important;
-  }
-
-  .mt-200 {
-    margin-top: 64px !important;
-  }
-
-  .mb-48 {
-    margin-bottom: 24px !important;
-  }
-
-  .btnBlank {
-    width: 100%;
-    max-width: 228px;
-    margin: 0 auto;
-    height: 50px;
-    padding: 0 14px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    font-size: 15px;
-    line-height: 1.2;
-  }
-
-  .statsCardsBox {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas:
-      "main main"
-      "left right";
-    align-items: end;
-    gap: 12px;
-    margin: 12px auto 0;
-  }
-
-  .statsCardsBox .centerBox,
-  .statsCardsBox .left,
-  .statsCardsBox .right {
-    position: static;
-    width: 100%;
-  }
-
-  .statsCardsBox .centerBox {
-    display: block;
-    grid-area: main;
-    width: min(90%, 320px);
-    margin: 0 auto;
-    transform: none;
-  }
-
-  .statsCardsBox .left {
-    grid-area: left;
-    width: 100%;
-    margin-left: 0;
-    transform: none;
-  }
-
-  .statsCardsBox .right {
-    grid-area: right;
-    width: 100%;
-    transform: none;
-  }
-
-  .statsCardsBox .centerBox img,
-  .statsCardsBox .left img,
-  .statsCardsBox .right img {
-    width: 100%;
-    margin: 0;
-    display: block;
-  }
-
-  .statsCardsBox .left img,
-  .statsCardsBox .right img {
-    aspect-ratio: 1.7 / 1;
-    object-fit: contain;
-    border-radius: 14px;
-  }
-
-  .statsCardsBox .centerBox img {
-    aspect-ratio: 1.22 / 1;
-    object-fit: contain;
-    border-radius: 16px;
-  }
-
-  .no-manager-container {
-    padding-top: 20px;
-    padding-bottom: 0;
-    margin-top: 0;
-  }
-
-  .no-manager-left {
-    padding-right: 0;
-    padding-bottom: 40px;
-  }
-
-  .no-manager-right {
-    padding-left: 0;
-    padding-top: 8px;
-  }
-
-  .no-manager-title {
-    font-size: 2rem;
-    line-height: 1.25;
-    padding-top: 0;
-    margin-bottom: 12px;
-  }
-
-  .no-manager-desc {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .hello-bubble {
-    right: 48px;
-    bottom: 52px;
-    padding: 6px 10px;
-    font-size: 14px;
-    transform: rotate(-12deg);
-  }
-
-  .nia-icon {
-    right: 0;
-    bottom: -8px;
-    width: 72px;
-    height: 82px;
-  }
-
-  .meet-nia-bubble {
-    top: auto;
-    right: 10px;
-    bottom: 78px;
-    padding: 4px 10px;
-    font-size: 14px;
-    transform: rotate(-10deg);
-  }
-
-  .meet-nia-bubble::after {
-    left: auto;
-    right: 16px;
-    width: 10px;
-    height: 10px;
-  }
-
-  .meet-nia-container {
-    height: 320px;
-    margin-top: 16px;
-    border-radius: 12px;
-  }
-
-  .meet-nia-full-image,
-  .meet-nia-full-image1,
-  .meet-nia-full-image2 {
-    margin-top: 0;
-  }
-
-  .section-title {
-    font-size: 30px;
-    line-height: 1.2;
-  }
-
-  .complexity-card {
-    height: auto !important;
-    width: 100% !important;
-    min-height: 0 !important;
-    padding: 22px 20px 92px;
-    border-radius: 16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .card-title {
-    font-size: 18px;
-    line-height: 1.32;
-    margin-bottom: 12px;
-  }
-
-  .card-description,
-  .smart-email-text {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .card-description br,
-  .smart-email-text br {
-    display: none;
-  }
-
-  .card-icon {
-    margin-bottom: 10px;
-  }
-
-  .card-art {
-    opacity: 0.32;
-    transform-origin: bottom right;
-  }
-
-  .complexity-card .card-art {
-    width: min(38vw, 148px) !important;
-    height: auto !important;
-    max-width: none;
-    max-height: none;
-    right: 12px !important;
-    bottom: 8px !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    opacity: 0.42;
-  }
-
-  .wide-card .card-art {
-    width: min(34vw, 132px) !important;
-  }
-
-  .card-art-emails {
-    width: min(30vw, 116px) !important;
-    right: 18px !important;
-    bottom: 14px !important;
-    opacity: 0.3 !important;
-  }
-
-  .card-art-hours {
-    width: min(24vw, 92px) !important;
-    right: 18px !important;
-    top: 20px !important;
-    bottom: auto !important;
-    opacity: 0.34 !important;
-  }
-
-  .complexity-card .card-art :deep(.el-image__inner),
-  .complexity-card .card-art :deep(img) {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
-    object-position: right bottom;
-  }
-
-  .hours-card {
-    min-height: 180px !important;
-    background-position: center;
-  }
-
-  .py-16 {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .meet-nia-full-image1,
-  .meet-nia-full-image2 {
-    min-height: 380px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 14px 0;
-  }
-
-  .meet-nia-full-image2 {
-    min-height: 420px;
-  }
-
-  .smart-email-container,
-  .smart-email-container2 {
-    top: 20px;
-    left: 18px;
-    max-width: calc(100% - 36px);
-  }
-
-  .smart-email-copy .card-title {
-    font-size: 20px !important;
-    line-height: 1.2;
-    max-width: 78%;
-  }
-
-  .smart-email-copy .smart-email-text {
-    max-width: 78%;
-    font-size: 12px;
-    line-height: 1.55;
-  }
-
-  .smart-email-panel :deep(svg),
-  .smart-email-panel :deep(canvas) {
-    inset: auto 0 0 0;
-    height: 48% !important;
-  }
-
-  .smart-showcase-card {
-    margin: 14px 0;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .gradient-text-3color {
-    font-size: 22px;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  .lessBg,
-  .moreBg,
-  .yellowBg {
-    display: inline-block;
-    background-size: 100% auto;
-    vertical-align: baseline;
-  }
-
-  .lessBg {
-    width: 78px;
-    height: 42px;
-    padding: 0 6px;
-  }
-
-  .moreBg {
-    width: 92px;
-    height: 47px;
-    padding: 0 6px;
-  }
-
-  .yellowBg {
-    width: 92px;
-    height: 40px;
-    padding: 0 6px;
-  }
-
-  .testimonials-container {
-    padding: 0 16px;
-    margin-top: 40px;
-  }
-
-  .testimonials-container .font-TobiasTRIAL {
-    font-size: 30px !important;
-    line-height: 1.25 !important;
-    height: auto !important;
-  }
-
-  .testimonial-card-custom2 {
-    min-width: 280px;
-    max-width: 280px;
-    height: 272px;
-    padding: 18px 16px;
-    margin-right: 16px;
-  }
-
-  .testimonial-content {
-    max-height: 80px;
-    -webkit-line-clamp: 4;
-  }
-
-  .fqa-title {
-    font-size: 32px !important;
-    margin-bottom: 24px;
-  }
-
-  .faq-question {
-    align-items: flex-start;
-    gap: 12px;
-    padding: 16px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .faq-answer {
-    padding: 0 16px 16px;
-    font-size: 14px;
-    line-height: 1.7;
-  }
 }
 </style>

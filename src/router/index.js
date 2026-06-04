@@ -2,39 +2,30 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
+    path: '/company_web',
+    name: 'alias_home',
+    component: () => import('../views/HomeView.vue'),
+    meta: { 
+      title: '江西慧点奇丰科技有限公司--专注全栈开发3年', 
+      description: '江西慧点奇丰科技有限公司专注于全栈开发，提供高质量的软件解决方案，助力企业数字化转型。' 
+    }
+  },
+  {
     path: '/',
     name: 'home',
     component: () => import('../views/HomeView.vue'),
     meta: { 
-      title: 'Colla - Automate Brand Collaborations', 
-      description: 'Automate every brand collab, from inbox to income with Colla.' 
+      title: '江西慧点奇丰科技有限公司--专注全栈开发3年', 
+      description: '江西慧点奇丰科技有限公司专注于全栈开发，提供高质量的软件解决方案，助力企业数字化转型。' 
     }
   },
   {
-    path: '/price',
-    name: 'price',
-    component: () => import('../views/PriceView.vue'),
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/ContactView.vue'),
     meta: { 
-      title: 'Pricing - Colla', 
-      description: 'View pricing plans for Colla brand collaboration automation tools.' 
-    }
-  },
-  {
-    path: '/products',
-    name: 'products',
-    component: () => import('../views/HomeView.vue'),
-    meta: { 
-      title: 'Products - Colla', 
-      description: 'Explore Colla products for brand collaboration automation.' 
-    }
-  },
-  {
-    path: '/projects',
-    name: 'projects',
-    component: () => import('../views/HomeView.vue'),
-    meta: { 
-      title: 'Projects - Colla', 
-      description: 'View Colla projects and case studies.' 
+      title: '联系我们-江西慧点奇丰科技有限公司', 
+      description: '为您提供全栈开发服务，联系我们了解更多信息。' 
     }
   },
   {
@@ -42,26 +33,8 @@ const routes = [
     name: 'about',
     component: () => import('../views/about/index.vue'),
     meta: { 
-      title: 'About - Colla', 
-      description: 'Learn more about Colla and our mission.' 
-    }
-  },
-  {
-    path: '/privacy',
-    name: 'privacy',
-    component: () => import('../views/HomeView.vue'),
-    meta: { 
-      title: 'Privacy Policy - Colla', 
-      description: 'Colla privacy policy and data protection information.' 
-    }
-  },
-  {
-    path: '/terms',
-    name: 'terms',
-    component: () => import('../views/HomeView.vue'),
-    meta: { 
-      title: 'Terms of Service - Colla', 
-      description: 'Colla terms of service and user agreement.' 
+      title: '关于我们-江西慧点奇丰科技有限公司', 
+      description: '江西慧点奇丰科技有限公司专注于全栈开发，提供高质量的软件解决方案，助力企业数字化转型。' 
     }
   },
   // Catch all route for 404
@@ -77,7 +50,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -90,7 +63,7 @@ const router = createRouter({
 
 // 设置页面标题
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Colla'
+  document.title = to.meta.title || '江西慧点奇丰科技有限公司'
   const metaDescription = document.querySelector('meta[name="description"]')
   if (metaDescription) {
     metaDescription.setAttribute('content', to.meta.description || '')
