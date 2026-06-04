@@ -1,4 +1,7 @@
 User-agent: Baiduspider
 Allow: /
-User-agane: *
+User-agent: *
 Allow: /
+
+# Sitemap (请替换为你的站点域名)
+Sitemap: https://hdqf.top/sitemap.xml
